@@ -57,10 +57,10 @@ export function Navbar() {
             AB
           </span>
           <span className="min-w-0">
-            <span className="block truncate font-display text-base font-semibold leading-tight text-foreground">
+            <span className={cn("block truncate font-display text-base font-semibold leading-tight", scrolled ? "text-foreground" : "text-ink-foreground")}>
               {company.name}
             </span>
-            <span className="block truncate text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
+            <span className={cn("block truncate text-[0.65rem] uppercase tracking-[0.18em]", scrolled ? "text-muted-foreground" : "text-ink-foreground/60")}>
               Scientific Technology
             </span>
           </span>
@@ -77,7 +77,9 @@ export function Navbar() {
                   "relative rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   active === id
                     ? "text-accent"
-                    : "text-muted-foreground hover:text-foreground",
+                    : scrolled
+                      ? "text-muted-foreground hover:text-foreground"
+                      : "text-ink-foreground/75 hover:text-ink-foreground",
                 )}
               >
                 {item.label}
@@ -100,7 +102,10 @@ export function Navbar() {
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="grid size-10 shrink-0 place-items-center rounded-md border border-border text-foreground lg:hidden"
+          className={cn(
+            "grid size-10 shrink-0 place-items-center rounded-md border lg:hidden",
+            scrolled ? "border-border text-foreground" : "border-ink-foreground/25 text-ink-foreground",
+          )}
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
