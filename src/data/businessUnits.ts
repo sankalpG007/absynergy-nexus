@@ -4,7 +4,7 @@ export type BusinessUnit = {
   subtitle: string;
   description: string;
   focus: string[];
-  href: string;
+  href: "/vasudhayan" | "/mandirayan";
 };
 
 export const businessUnits: BusinessUnit[] = [
