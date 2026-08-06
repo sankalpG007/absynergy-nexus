@@ -13,13 +13,24 @@ import { cn } from "@/lib/utils";
 function buildSchema(fields: FormFieldConfig[]) {
   const shape: Record<string, z.ZodTypeAny> = {};
   for (const field of fields) {
-    let base = z.string().trim().max(field.type === "textarea" ? 1500 : 160);
-    if (field.type === "email") base = base.pipe(z.string().email("Enter a valid email address"));
+    let base: z.ZodTypeAny = z.string().trim().max(field.type === "textarea" ? 1500 : 160);
+    if (field.type === "email")
+      base = z.string().trim().email("Enter a valid email address").max(160);
     if (field.type === "tel")
-      base = base.pipe(z.string().regex(/^[+\d][\d\s-]{7,19}$/, "Enter a valid phone number"));
-    shape[field.name] = field.required
-      ? base.pipe(z.string().min(1, `${field.label} is required`))
-      : base.optional();
+      base = z
+        .string()
+        .trim()
+        .regex(/^[+\d][\d\s-]{7,19}$/, "Enter a valid phone number");
+    if (field.required) {
+      base = z
+        .string()
+        .trim()
+        .min(1, `${field.label} is required`)
+        .pipe(base);
+    } else {
+      base = z.union([z.literal(""), base]);
+    }
+    shape[field.name] = base;
   }
   return z.object(shape);
 }
