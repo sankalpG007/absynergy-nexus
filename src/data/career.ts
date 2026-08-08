@@ -13,55 +13,78 @@ export type CareerTrack = {
   icon: LucideIcon;
   duration: string;
   description: string;
+  items: string[];
 };
 
 export const careerTracks: CareerTrack[] = [
   {
-    id: "internship",
-    title: "Internships",
+    id: "engineering",
+    title: "Internships — Engineering",
     icon: GraduationCap,
-    duration: "4 – 24 weeks",
-    description:
-      "Project-attached internships for engineering, geology, geography and environmental science students, with a supervised deliverable and evaluation report.",
+    duration: "Online / Offline",
+    description: "Project-attached internships for engineering students.",
+    items: [
+      "AI / ML",
+      "Data Sciences",
+      "Computer Software",
+      "Civil Engineering",
+      "Mechanical Engineering",
+    ],
+  },
+  {
+    id: "sciences",
+    title: "Internships — Basic & Applied Sciences",
+    icon: BookOpen,
+    duration: "Online / Offline",
+    description: "Internships for science graduates and postgraduates.",
+    items: [
+      "AI / ML",
+      "Data Sciences",
+      "Computer Software",
+      "Biotechnology",
+      "Environmental Sciences",
+      "Geology",
+      "Geography",
+    ],
+  },
+  {
+    id: "iti",
+    title: "Internships — ITI",
+    icon: Wrench,
+    duration: "Online / Offline",
+    description: "Technical internships for ITI candidates.",
+    items: ["Draftsman", "Cartography", "Computer Software"],
   },
   {
     id: "training",
-    title: "Professional Training",
-    icon: BookOpen,
-    duration: "2 – 8 weeks",
-    description:
-      "Instructor-led programmes on GIS, remote sensing, UAV data processing, LiDAR classification and hydraulic modelling, using live project datasets.",
-  },
-  {
-    id: "skill",
-    title: "Skill Development",
-    icon: Wrench,
-    duration: "Rolling",
-    description:
-      "Short intensives for working professionals and department staff, focused on tool proficiency and reproducible workflows.",
-  },
-  {
-    id: "certification",
-    title: "Certification",
+    title: "Training Courses",
     icon: Award,
-    duration: "On completion",
-    description:
-      "Assessed certification with a documented competency statement that institutions and employers can verify.",
+    duration: "Online / Offline",
+    description: "Instructor-led geospatial and drone training programmes.",
+    items: [
+      "Remote Sensing & GIS",
+      "DGPS & CORS Surveying",
+      "Advance Geospatial Modelling",
+      "Geospatial Technology for Architects, Heritage Conservation Architects, Landscape Designers & Urban Planners",
+      "QGIS Hands-on Training",
+      "DRONE Flying & Processing Courses",
+      "DGCA DRONE Pilot Licences (in collaboration)",
+    ],
   },
 ];
 
 export const careerBenefits = [
-  "Work on live client datasets under NDA-governed supervision",
-  "One-to-one mentorship from practising geospatial engineers",
-  "Structured evaluation with a written competency report",
-  "Access to UAV, LiDAR and modelling software environments",
-  "Placement referrals for high-performing candidates",
-  "Certificate recognised by partner institutions",
+  "Work on live ABsynergy project datasets",
+  "Mentorship from practising geospatial scientists and DGCA-certified pilots",
+  "Exposure to DRONE, LiDAR, GPR and DGPS/CORS field operations",
+  "Hands-on training on QGIS and geospatial modelling tools",
+  "Both online and offline delivery options",
+  "Certification on completion of the programme",
 ];
 
 export const mentorship = {
   icon: Users,
-  title: "Mentorship model",
+  title: "Trainings, Internships & Capacity Building",
   description:
-    "Each candidate is assigned a technical mentor and a project reviewer. Weekly checkpoints track progress against a defined scope, and the final review is documented in writing.",
+    "From 01 Sep 2026, ABsynergy has formally extended beyond project activities into trainings, internships and capacity building programmes, guided by Dr. Ajay Deshpande and the senior advisory team.",
 };
