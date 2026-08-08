@@ -15,14 +15,13 @@ import { Hero } from "@/components/sections/Hero";
 import { Partners } from "@/components/sections/Partners";
 import { Projects } from "@/components/sections/Projects";
 import { Technologies } from "@/components/sections/Technologies";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { ScrollProgress } from "@/components/site/ScrollProgress";
 
-const title = "ABSynergy — Geospatial & Scientific Technology Consulting";
+const title = "ABsynergy — Scientific and Technical Consultancy, Nagpur";
 const description =
-  "ABSynergy delivers GIS, remote sensing, drone survey, LiDAR and digital twin engineering for government, industry and research across mining, water, environment and heritage.";
+  "ABsynergy combines Remote Sensing, Drone Surveys, LiDAR, GPR and Spatial Analytics to deliver data-driven intelligence for geo-environmental, heritage and infrastructural challenges.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,17 +41,20 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "ABSynergy",
-          legalName: "ABSynergy Technologies",
+          name: "ABsynergy",
+          legalName: "ABsynergy",
           description,
-          email: "connect@absynergy.in",
-          telephone: "+91 98400 00000",
+          foundingDate: "2014",
+          email: "absynergy.nagpur@gmail.com",
+          telephone: "+91 7720046490",
+          url: "https://absynergy.com",
+          founder: { "@type": "Person", name: "Dr. Ajay Deshpande" },
           address: {
             "@type": "PostalAddress",
-            streetAddress: "4th Floor, Sigma Tech Park, Guindy",
-            addressLocality: "Chennai",
-            addressRegion: "Tamil Nadu",
-            postalCode: "600032",
+            streetAddress: "\"Shaishavaha\", First Floor, 53, Nav-Nirman Society, Pratap Nagar",
+            addressLocality: "Nagpur",
+            addressRegion: "Maharashtra",
+            postalCode: "440022",
             addressCountry: "IN",
           },
           subOrganization: [
@@ -84,7 +86,6 @@ function Home() {
         <Partners />
         <Clients />
         <Gallery />
-        <Testimonials />
         <Faq />
         <Contact />
         <Forms />
