@@ -13,8 +13,8 @@ export function Career() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Career & training"
-          title="Learn the craft on live scientific programmes"
-          description="We train the people who will run India's spatial infrastructure. Every programme is attached to real project data, supervised delivery and written assessment."
+          title="Internships, training and capacity building"
+          description="ABsynergy runs online and offline internships and training courses across engineering, sciences and ITI streams, including DGCA drone pilot licencing in collaboration."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -31,6 +31,14 @@ export function Career() {
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                     {track.description}
                   </p>
+                  <ul className="mt-4 space-y-2">
+                    {track.items.map((item) => (
+                      <li key={item} className="flex gap-2 text-sm text-muted-foreground">
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </Reveal>
             );
