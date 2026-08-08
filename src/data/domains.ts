@@ -1,14 +1,20 @@
 import {
   Building2,
+  Boxes,
   Droplets,
   Factory,
+  FileCheck2,
   Landmark,
+  Layers,
   Leaf,
   LifeBuoy,
+  Map,
   Mountain,
+  PawPrint,
   Sprout,
-  TreePine,
+  Users,
   Waves,
+  CloudRain,
   type LucideIcon,
 } from "lucide-react";
 
@@ -17,88 +23,119 @@ export type Domain = {
   name: string;
   icon: LucideIcon;
   description: string;
-  cta: string;
 };
 
 export const domains: Domain[] = [
   {
-    id: "mining",
-    name: "Mining",
-    icon: Mountain,
-    description:
-      "Lease boundary verification, periodic volumetrics, overburden tracking and statutory compliance reporting for mineral operations.",
-    cta: "Discuss a mining survey",
-  },
-  {
-    id: "water-resources",
-    name: "Water Resources",
-    icon: Droplets,
-    description:
-      "Watershed characterisation, reservoir sedimentation studies, canal network mapping and groundwater prospect modelling.",
-    cta: "Plan a water study",
-  },
-  {
-    id: "flood-mapping",
-    name: "Flood Mapping",
-    icon: Waves,
-    description:
-      "2D hydraulic modelling, inundation scenarios, vulnerability mapping and early-warning support for districts and utilities.",
-    cta: "Model a flood scenario",
-  },
-  {
-    id: "carbon-credit",
-    name: "Carbon Credit",
+    id: "water-carbon-credit",
+    name: "Water Credit & Carbon Credit",
     icon: Leaf,
     description:
-      "Biomass baselines, plantation monitoring and MRV-ready documentation for carbon project developers and corporates.",
-    cta: "Build a carbon baseline",
+      "Baseline assessment, quantification and documentation support for water credit and carbon credit initiatives of industries and corporates.",
   },
   {
-    id: "river-conservation",
-    name: "River Conservation",
-    icon: LifeBuoy,
+    id: "water-audit",
+    name: "Mandatory Water Audit for Industries",
+    icon: Droplets,
     description:
-      "River morphology, encroachment detection, water quality integration and restoration prioritisation plans.",
-    cta: "Start a river assessment",
+      "Statutory water audits for industrial units — source-to-discharge accounting, loss identification and compliance reporting.",
   },
   {
-    id: "heritage",
-    name: "Heritage",
-    icon: Landmark,
+    id: "rainwater-harvesting",
+    name: "Roof Top Rainwater Harvesting",
+    icon: CloudRain,
     description:
-      "Millimetre-accurate documentation of monuments and temple complexes, condition mapping and conservation digital twins.",
-    cta: "Document a heritage site",
-  },
-  {
-    id: "urban-planning",
-    name: "Urban Planning",
-    icon: Building2,
-    description:
-      "Base map creation, property and utility mapping, master plan support and urban growth analytics for local bodies.",
-    cta: "Support a city plan",
-  },
-  {
-    id: "environment",
-    name: "Environment",
-    icon: TreePine,
-    description:
-      "Baseline environmental studies, impact assessment inputs and continuous compliance monitoring programmes.",
-    cta: "Commission a baseline",
+      "Design and feasibility of rooftop rainwater harvesting systems with catchment computation and recharge structure planning.",
   },
   {
     id: "wetlands",
-    name: "Wetlands",
-    icon: Sprout,
+    name: "Wetlands and Surface Water",
+    icon: Waves,
     description:
-      "Wetland delineation, health indices, encroachment tracking and restoration monitoring aligned to national guidelines.",
-    cta: "Assess a wetland",
+      "Delineation, health assessment and monitoring of wetlands, tanks and surface water bodies using satellite and field data.",
   },
   {
-    id: "natural-resources",
-    name: "Natural Resources",
+    id: "biodiversity",
+    name: "Biodiversity Studies & Public Biodiversity Registers",
+    icon: Sprout,
+    description:
+      "Field biodiversity documentation and preparation of People's Biodiversity Registers for local bodies and committees.",
+  },
+  {
+    id: "noc",
+    name: "CGWB NOC & NOC Irrigation Department",
+    icon: FileCheck2,
+    description:
+      "Technical studies and documentation support for Central Ground Water Board and Irrigation Department no-objection clearances.",
+  },
+  {
+    id: "industrial-3d",
+    name: "Industrial 3D Scanning by DRONE and LiDAR",
+    icon: Boxes,
+    description:
+      "As-built 3D capture of plants, structures and industrial campuses using drone photogrammetry and laser scanning.",
+  },
+  {
+    id: "wildlife",
+    name: "Wildlife Conservation Planning",
+    icon: PawPrint,
+    description:
+      "Habitat mapping, corridor analysis and spatial inputs for wildlife conservation and management plans.",
+  },
+  {
+    id: "heritage-conservation",
+    name: "Heritage Conservation Planning",
+    icon: Landmark,
+    description:
+      "Measured documentation, condition mapping and conservation planning support for monuments and temple complexes.",
+  },
+  {
+    id: "impact-assessment",
+    name: "Impact Assessment Support",
+    icon: Map,
+    description:
+      "Spatial and scientific inputs for heritage, environment, mining, NGO and CSR impact assessments.",
+  },
+  {
+    id: "mining",
+    name: "Mining Mapping and Volume Estimation",
+    icon: Mountain,
+    description:
+      "Lease boundary verification, periodic drone surveys and volume estimation for mining blocks and quarries.",
+  },
+  {
+    id: "development-plans",
+    name: "Development Plan / Regional Plans",
+    icon: Building2,
+    description:
+      "Preparation of Development Plans and Regional Plans in the Remote Sensing and GIS domain for planning authorities.",
+  },
+  {
+    id: "below-ground-3d",
+    name: "Below Ground Level 3D Modelling",
+    icon: Layers,
+    description:
+      "GPR and geophysics-driven modelling of subsurface features, foundations and buried structures.",
+  },
+  {
+    id: "flood-inundation",
+    name: "Flood Inundation Mapping",
+    icon: LifeBuoy,
+    description:
+      "HEC-RAS based inundation scenarios, depth mapping and vulnerability assessment for rivers and settlements.",
+  },
+  {
+    id: "river-conservation",
+    name: "River Conservation Plans",
     icon: Factory,
     description:
-      "Resource inventories, land capability studies and allocation planning for state departments and industry.",
-    cta: "Inventory your resources",
+      "River morphology, encroachment and pollution mapping feeding into actionable river conservation plans.",
+  },
+  {
+    id: "csr-socio",
+    name: "CSR & Socio-Economic Studies",
+    icon: Users,
+    description:
+      "Baseline socio-economic surveys, need assessment and geospatial monitoring of CSR programmes.",
   },
 ];
