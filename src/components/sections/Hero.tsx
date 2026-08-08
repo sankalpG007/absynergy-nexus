@@ -53,6 +53,15 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.14 }}
+          className="mt-5 font-display text-sm font-semibold uppercase tracking-[0.28em] text-accent sm:text-base"
+        >
+          {hero.tagline}
+        </motion.p>
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.18 }}
