@@ -31,9 +31,15 @@ export function Contact() {
               href={`mailto:${contact.email}`}
             />
             <ContactCard
+              icon={<Mail className="size-5 text-accent" />}
+              label="Email (Dr. Ajay Deshpande)"
+              value={contact.altEmail}
+              href={`mailto:${contact.altEmail}`}
+            />
+            <ContactCard
               icon={<MessageCircle className="size-5 text-accent" />}
               label="WhatsApp"
-              value="Message our project desk"
+              value={contact.whatsappDisplay}
               href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
             />
             <ContactCard

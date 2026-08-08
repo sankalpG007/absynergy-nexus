@@ -34,6 +34,12 @@ export function Footer() {
                 <Mail className="size-4 shrink-0 text-accent" />
                 <a href={`mailto:${company.contact.email}`}>{company.contact.email}</a>
               </p>
+              <p className="flex items-center gap-3">
+                <Mail className="size-4 shrink-0 text-accent" />
+                <a href={`mailto:${company.contact.altEmail}`}>{company.contact.altEmail}</a>
+              </p>
+              <p className="text-xs text-ink-foreground/55">{company.registration}</p>
+              <p className="text-xs text-ink-foreground/55">{company.website}</p>
             </div>
           </div>
 
