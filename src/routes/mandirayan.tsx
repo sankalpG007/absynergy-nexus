@@ -9,17 +9,17 @@ const unit = businessUnits[1]!;
 export const Route = createFileRoute("/mandirayan")({
   head: () => ({
     meta: [
-      { title: "Mandirayan — Temple Ecosystem Solutions | ABSynergy" },
+      { title: "Mandirayan®™ — Temple Town Ecosystem Solutions | ABsynergy" },
       {
         name: "description",
         content:
-          "Mandirayan is ABSynergy's temple ecosystem initiative: heritage 3D documentation, temple land records, conservation planning and facility systems.",
+          "Mandirayan®™, a business unit of ABsynergy, delivers GeoSpatial Technology based Temple Town Ecosystem Solutions: geo-digital archival, 2D/3D master plans, asset inventory and crowd management.",
       },
-      { property: "og:title", content: "Mandirayan — Temple Ecosystem Solutions | ABSynergy" },
+      { property: "og:title", content: "Mandirayan®™ — Temple Town Ecosystem Solutions | ABsynergy" },
       {
         property: "og:description",
         content:
-          "Precision documentation and digital twin technology for temple complexes and heritage assets.",
+          "DGPS/CORS, Drone, LiDAR, close range photogrammetry, 360° recording and GPR for temple ecosystems.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/mandirayan" },
@@ -55,7 +55,7 @@ function MandirayanPage() {
         <div className="mt-8">
           <Button asChild variant="onDark" size="lg">
             <Link to="/">
-              <ArrowLeft className="size-4" /> Back to ABSynergy
+              <ArrowLeft className="size-4" /> Back to ABsynergy
             </Link>
           </Button>
         </div>

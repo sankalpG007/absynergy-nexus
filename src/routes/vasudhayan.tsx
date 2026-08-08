@@ -9,17 +9,17 @@ const unit = businessUnits[0]!;
 export const Route = createFileRoute("/vasudhayan")({
   head: () => ({
     meta: [
-      { title: "Vasudhayan — Geo-Spatial Intelligence | ABSynergy" },
+      { title: "Vasudhayan — Think Spatial | ABsynergy" },
       {
         name: "description",
         content:
-          "Vasudhayan is ABSynergy's geo-spatial intelligence initiative: remote sensing, UAV and LiDAR survey, hydrological modelling and spatial decision systems.",
+          "Vasudhayan, a business unit of ABsynergy, provides scientific and technical services based on geospatial technology across environment, water, mining, forest, urban areas and rivers.",
       },
-      { property: "og:title", content: "Vasudhayan — Geo-Spatial Intelligence | ABSynergy" },
+      { property: "og:title", content: "Vasudhayan — Think Spatial | ABsynergy" },
       {
         property: "og:description",
         content:
-          "Earth observation, survey and analytics programmes for land, water and infrastructure.",
+          "Geospatial scientific and technical services for environment, water, mining, forest and urban systems.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/vasudhayan" },
@@ -59,7 +59,7 @@ function UnitPlaceholder() {
         <div className="mt-8">
           <Button asChild variant="onDark" size="lg">
             <Link to="/">
-              <ArrowLeft className="size-4" /> Back to ABSynergy
+              <ArrowLeft className="size-4" /> Back to ABsynergy
             </Link>
           </Button>
         </div>
