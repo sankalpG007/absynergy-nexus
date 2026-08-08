@@ -5,16 +5,16 @@ import { company } from "@/data/company";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy | ABSynergy" },
+      { title: "Privacy Policy | ABsynergy" },
       {
         name: "description",
         content:
-          "How ABSynergy collects, uses, stores and protects personal and project data submitted through this website.",
+          "How ABsynergy collects, uses, stores and protects personal and project data submitted through this website.",
       },
-      { property: "og:title", content: "Privacy Policy | ABSynergy" },
+      { property: "og:title", content: "Privacy Policy | ABsynergy" },
       {
         property: "og:description",
-        content: "Data handling, retention and client ownership practices at ABSynergy.",
+        content: "Data handling, retention and client ownership practices at ABsynergy.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/privacy" },

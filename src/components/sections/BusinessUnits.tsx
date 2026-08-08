@@ -18,7 +18,7 @@ export function BusinessUnits() {
           eyebrow="Our initiatives"
           tone="dark"
           title="Two specialised units under one scientific standard"
-          description="ABSynergy is the parent organisation. Each initiative runs its own team, methodology and dedicated website while sharing our quality framework."
+          description="ABsynergy delivers through two specialised units — Vasudhayan (Think Spatial) and Mandirayan®™, a registered trademark entity for temple town ecosystem solutions."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">

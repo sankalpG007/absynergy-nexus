@@ -2,45 +2,45 @@ export type Faq = { id: string; question: string; answer: string };
 
 export const faqs: Faq[] = [
   {
-    id: "engagement",
-    question: "How does an engagement with ABSynergy typically begin?",
+    id: "about",
+    question: "What is ABsynergy?",
     answer:
-      "It begins with a scoping discussion where we define the decision the data must support. We then issue a technical proposal containing method, accuracy budget, deliverable list, schedule and commercial terms before any fieldwork is planned.",
-  },
-  {
-    id: "government",
-    question: "Do you work with government departments and public tenders?",
-    answer:
-      "Yes. A significant share of our work is with state departments, municipal bodies and public undertakings. We are experienced with tender documentation, third-party quality audits and departmental data handover formats.",
-  },
-  {
-    id: "accuracy",
-    question: "How is accuracy defined and verified?",
-    answer:
-      "Every project carries a written accuracy specification. We establish independent check points, report RMSE against them, and include the validation record with the deliverable so it can be audited.",
-  },
-  {
-    id: "data-ownership",
-    question: "Who owns the data and models you produce?",
-    answer:
-      "The client owns all project deliverables, including raw acquisition data where contracted. We retain no exclusive rights and provide outputs in open, non-proprietary formats wherever the specification allows.",
+      "Founded in 2014, ABsynergy is a scientific and technical consultancy built on strategy, foresight, data and research. Over 12 years we have delivered 100+ projects through two specialised units — Vasudhayan and Mandirayan®™ (earlier GeoWISE System).",
   },
   {
     id: "units",
-    question: "What is the relationship between ABSynergy, Vasudhayan and Mandirayan?",
+    question: "What is the difference between Vasudhayan and Mandirayan®™?",
     answer:
-      "ABSynergy is the parent organisation. Vasudhayan is our geo-spatial intelligence initiative and Mandirayan is our temple ecosystem initiative. Each operates as a specialised division with its own team and dedicated website.",
+      "Vasudhayan (Think Spatial) delivers geospatial scientific and technical services across environment, water, mining, forest, urban areas and rivers. Mandirayan®™ is a registered trademark entity dedicated to GeoSpatial Technology based Temple Town Ecosystem Solutions.",
+  },
+  {
+    id: "technologies",
+    question: "Which technologies does ABsynergy use?",
+    answer:
+      "Remote Sensing, DRONE, LiDAR, GIS, GPR, Gaussian Splat 3D rendering, bathymetry, close range photogrammetry, DGPS/CORS, 3D digital twins, agentic AI, HEC-RAS flood modelling, IoT sensors, SWAT, geophysical surveys, noise measurement, 360° capture and volumetric/subsurface analysis tools.",
+  },
+  {
+    id: "registration",
+    question: "Is ABsynergy formally registered for government work?",
+    answer:
+      "Yes. ABsynergy is GST and Udyam registered and operates under HSN Code 998393 for scientific and technical consultancy services.",
+  },
+  {
+    id: "leadership",
+    question: "Who leads ABsynergy?",
+    answer:
+      "Dr. Ajay Deshpande, Founder and CEO, with over three decades of experience at MRSAC (Resources Scientist – Grade Scientist SG) and NEERI. He holds a Ph.D. in Geoinformatics, is a certified DGCA drone pilot and a recipient of the National e-Governance Gold Award.",
   },
   {
     id: "internship",
-    question: "Are internships paid, and who can apply?",
+    question: "Who can apply for internships and training?",
     answer:
-      "Selected long-duration interns receive a stipend. Applications are open to students and recent graduates in engineering, geology, geography, planning and environmental science. Selection is based on fundamentals and project fit.",
+      "Engineering, basic and applied sciences, and ITI candidates. Internships and training courses run both online and offline, covering Remote Sensing & GIS, DGPS & CORS surveying, geospatial modelling, QGIS, and DRONE flying and processing.",
   },
   {
-    id: "turnaround",
-    question: "What are typical project timelines?",
+    id: "contact",
+    question: "How do I start an enquiry?",
     answer:
-      "A focused survey and mapping assignment usually completes in three to six weeks. Modelling, digital twin and multi-season monitoring programmes run from three months to multi-year cycles.",
+      "Use the Business Enquiry form, write to absynergy.nagpur@gmail.com, or call +91 7720046490. WhatsApp is available on +91 9422111927. Our office is at \"Shaishavaha\", First Floor, 53, Nav-Nirman Society, Pratap Nagar, Nagpur – 440 022.",
   },
 ];

@@ -61,7 +61,7 @@ export function Navbar() {
               {company.name}
             </span>
             <span className={cn("block truncate text-[0.65rem] uppercase tracking-[0.18em]", scrolled ? "text-muted-foreground" : "text-ink-foreground/60")}>
-              Scientific Technology
+              Scientific and Technical Consultancy
             </span>
           </span>
         </Link>

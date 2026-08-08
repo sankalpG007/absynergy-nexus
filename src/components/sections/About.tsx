@@ -10,8 +10,8 @@ export function About() {
       <div aria-hidden className="absolute inset-x-0 top-0 h-96 bg-[image:var(--gradient-soft)]" />
       <div className="section-shell relative">
         <SectionHeading
-          eyebrow="Who we are"
-          title="A scientific practice built for institutional decision-making"
+          eyebrow="About ABsynergy"
+          title="Strategy, foresight, data and research since 2014"
           description={about.story}
         />
 
@@ -48,9 +48,9 @@ export function About() {
 
         <div className="mt-24">
           <Reveal>
-            <p className="eyebrow">Our journey</p>
+            <p className="eyebrow">Chronology of events</p>
             <h3 className="mt-3 text-2xl font-semibold sm:text-3xl">
-              A decade of compounding capability
+              From 2014 to capacity building
             </h3>
           </Reveal>
 

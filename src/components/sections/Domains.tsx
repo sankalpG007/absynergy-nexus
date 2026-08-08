@@ -9,34 +9,40 @@ export function Domains() {
     <section id="domains" className="bg-surface py-24 lg:py-32">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Application domains"
+          eyebrow="Expert application domains"
           title="Where our technology is put to work"
-          description="Sector-specific teams combine measurement, modelling and regulatory understanding so that outputs are usable the day they are delivered."
+          description="Hover or tap a domain to read the scope of work. Each is delivered by ABsynergy's subject experts with departmental compliance in view."
         />
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, index) => {
             const Icon = domain.icon;
             return (
               <Reveal key={domain.id} delay={(index % 3) * 0.04}>
-                <a
-                  href="#business-enquiry"
-                  className="group relative flex h-full flex-col bg-card p-8 transition-colors hover:bg-background"
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-gradient transition-transform duration-500 group-hover:scale-x-100"
-                  />
-                  <Icon className="size-6 text-accent" />
-                  <h3 className="mt-6 font-display text-lg font-semibold">{domain.name}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {domain.description}
-                  </p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors group-hover:text-accent">
-                    {domain.cta}
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </a>
+                <div className="group h-52 [perspective:1200px]">
+                  <div className="relative size-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
+                    <div
+                      tabIndex={0}
+                      className="absolute inset-0 flex flex-col rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] [backface-visibility:hidden]"
+                    >
+                      <Icon className="size-6 text-accent" />
+                      <h3 className="mt-auto font-display text-lg font-semibold leading-snug">
+                        {domain.name}
+                      </h3>
+                    </div>
+                    <div className="absolute inset-0 flex flex-col justify-center rounded-xl border border-accent/40 bg-card p-7 shadow-[var(--shadow-lift)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {domain.description}
+                      </p>
+                      <a
+                        href="#business-enquiry"
+                        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent"
+                      >
+                        Business Enquiry <ArrowRight className="size-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </Reveal>
             );
           })}

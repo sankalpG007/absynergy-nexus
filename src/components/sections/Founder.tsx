@@ -34,7 +34,7 @@ export function Founder() {
           <Reveal>
             <p className="eyebrow">Leadership</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              Research discipline at the centre of commercial delivery
+              Three decades of institutional research behind every project
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">{founder.bio}</p>
           </Reveal>
@@ -82,6 +82,35 @@ export function Founder() {
               </ul>
             </div>
           </Reveal>
+
+          <Reveal delay={0.2}>
+            <h3 className="mt-12 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              Key roles
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Guardian Scientist for Geology, Mining, Archaeology, and strategic applications for
+              the Police and Home Department of the Government of Maharashtra.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+
+      <div className="section-shell mt-20">
+        <Reveal>
+          <p className="eyebrow">Team & leadership</p>
+          <h3 className="mt-3 text-2xl font-semibold sm:text-3xl">
+            Senior advisors, subject experts and associates
+          </h3>
+        </Reveal>
+        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {company.team.map((member, index) => (
+            <Reveal key={member.name} delay={(index % 3) * 0.05}>
+              <div className="h-full bg-card p-7 transition-colors hover:bg-background">
+                <p className="font-display text-base font-semibold leading-snug">{member.name}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{member.role}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

@@ -53,6 +53,15 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.14 }}
+          className="mt-5 font-display text-sm font-semibold uppercase tracking-[0.28em] text-accent sm:text-base"
+        >
+          {hero.tagline}
+        </motion.p>
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.18 }}
@@ -88,7 +97,11 @@ export function Hero() {
           {hero.stats.map((stat) => (
             <div key={stat.label} className="glass-panel-dark border-0 px-5 py-6 sm:px-7 sm:py-8">
               <dt className="text-2xl font-semibold text-ink-foreground sm:text-4xl">
-                <Counter value={stat.value} suffix={stat.suffix} />
+                {typeof stat.value === "number" ? (
+                  <Counter value={stat.value} suffix={stat.suffix ?? ""} />
+                ) : (
+                  <span className="text-xl sm:text-2xl">{stat.text}</span>
+                )}
               </dt>
               <dd className="mt-2 text-xs uppercase tracking-[0.14em] text-ink-foreground/60 sm:text-[0.7rem]">
                 {stat.label}

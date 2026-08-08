@@ -65,7 +65,7 @@ export function Projects() {
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <span className="glass-panel absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold">
-                    {project.status}
+                    {project.category}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-7">
@@ -74,7 +74,7 @@ export function Projects() {
                     {project.title}
                   </h3>
                   <p className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                    <MapPin className="size-3.5 text-accent" /> {project.location}
+                    <MapPin className="size-3.5 text-accent" /> {project.client}
                   </p>
                   <ul className="mt-5 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -130,7 +130,7 @@ export function Projects() {
               />
               <div className="p-8">
                 <p className="eyebrow">
-                  {selected.category} · {selected.status}
+                  {selected.category}
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold">{selected.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -139,9 +139,9 @@ export function Projects() {
                 <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div>
                     <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                      Location
+                      Client
                     </dt>
-                    <dd className="mt-1 text-sm">{selected.location}</dd>
+                    <dd className="mt-1 text-sm">{selected.client}</dd>
                   </div>
                   <div>
                     <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">

@@ -13,7 +13,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Talk to the team directly"
-          description="Reach us by phone, email or WhatsApp, or visit our Chennai office. For tender and procurement queries, please mark your email to the same address."
+          description="Reach us by phone, email or WhatsApp, or visit our Nagpur office. For tender and procurement queries, please mark your email to the same address."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.25fr]">
@@ -31,9 +31,15 @@ export function Contact() {
               href={`mailto:${contact.email}`}
             />
             <ContactCard
+              icon={<Mail className="size-5 text-accent" />}
+              label="Email (Dr. Ajay Deshpande)"
+              value={contact.altEmail}
+              href={`mailto:${contact.altEmail}`}
+            />
+            <ContactCard
               icon={<MessageCircle className="size-5 text-accent" />}
               label="WhatsApp"
-              value="Message our project desk"
+              value={contact.whatsappDisplay}
               href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
             />
             <ContactCard
@@ -46,7 +52,7 @@ export function Contact() {
           <Reveal delay={0.08}>
             <div className="overflow-hidden rounded-xl border border-border shadow-[var(--shadow-card)]">
               <iframe
-                title="ABSynergy office location on Google Maps"
+                title="ABsynergy office location on Google Maps"
                 src={contact.mapEmbed}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

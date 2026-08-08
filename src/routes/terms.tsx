@@ -5,13 +5,13 @@ import { company } from "@/data/company";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use | ABSynergy" },
+      { title: "Terms of Use | ABsynergy" },
       {
         name: "description",
         content:
-          "Terms governing the use of the ABSynergy website, published content, proposals and deliverables.",
+          "Terms governing the use of the ABsynergy website, published content, proposals and deliverables.",
       },
-      { property: "og:title", content: "Terms of Use | ABSynergy" },
+      { property: "og:title", content: "Terms of Use | ABsynergy" },
       {
         property: "og:description",
         content: "Website usage terms, content ownership and engagement conditions.",
