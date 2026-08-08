@@ -89,7 +89,7 @@ export function Hero() {
             <div key={stat.label} className="glass-panel-dark border-0 px-5 py-6 sm:px-7 sm:py-8">
               <dt className="text-2xl font-semibold text-ink-foreground sm:text-4xl">
                 {typeof stat.value === "number" ? (
-                  <Counter value={stat.value} suffix={stat.suffix} />
+                  <Counter value={stat.value} suffix={stat.suffix ?? ""} />
                 ) : (
                   <span className="text-xl sm:text-2xl">{stat.text}</span>
                 )}
