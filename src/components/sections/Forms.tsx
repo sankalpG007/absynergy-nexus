@@ -10,7 +10,7 @@ export function Forms() {
         <SectionHeading
           eyebrow="Work with us"
           title="Start a project or join a programme"
-          description="Two routes into ABSynergy: a technical enquiry for organisations, and an application for students and professionals seeking training."
+          description="Two routes into ABsynergy: a technical enquiry for organisations, and an application for students and professionals seeking training."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">

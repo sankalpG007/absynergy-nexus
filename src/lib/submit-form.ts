@@ -14,7 +14,7 @@ export async function submitForm(
     return {
       ok: false,
       message:
-        "Form endpoint is not configured yet. Please email connect@absynergy.in or call us directly.",
+        "Form endpoint is not configured yet. Please email absynergy.nagpur@gmail.com or call us directly.",
     };
   }
 
@@ -33,7 +33,7 @@ export async function submitForm(
   } catch {
     return {
       ok: false,
-      message: "We could not send your message. Please try again or email connect@absynergy.in.",
+      message: "We could not send your message. Please try again or email absynergy.nagpur@gmail.com.",
     };
   }
 }

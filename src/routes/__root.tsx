@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ABSynergy — Scientific Technology Consulting" },
+      { title: "ABsynergy — Scientific and Technical Consultancy" },
       {
         name: "description",
         content:
-          "ABSynergy is a scientific technology consulting organisation delivering geospatial intelligence, sensing systems and digital twin engineering.",
+          "ABsynergy is a scientific and technical consultancy delivering Remote Sensing, Drone, LiDAR, GPR and Spatial Analytics services from Nagpur, Maharashtra.",
       },
-      { name: "author", content: "ABSynergy Technologies" },
-      { property: "og:site_name", content: "ABSynergy" },
+      { name: "author", content: "ABsynergy" },
+      { property: "og:site_name", content: "ABsynergy" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
