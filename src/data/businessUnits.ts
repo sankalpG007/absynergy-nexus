@@ -11,19 +11,32 @@ export const businessUnits: BusinessUnit[] = [
   {
     id: "vasudhayan",
     name: "Vasudhayan",
-    subtitle: "Geo-Spatial Intelligence",
+    subtitle: "Think Spatial",
     description:
-      "Vasudhayan delivers earth observation, survey and analytics programmes for land, water and infrastructure. It operates ABSynergy's acquisition fleet, processing pipelines and spatial decision platforms.",
-    focus: ["Remote sensing", "UAV & LiDAR survey", "Hydrological modelling", "Spatial decision systems"],
+      "Vasudhayan provides scientific and technical services based on geospatial technology, across environment, water, mining, forest, urban and river systems.",
+    focus: [
+      "Environment",
+      "Surface and Ground Water",
+      "Mining",
+      "Forest",
+      "Urban Conglomerates",
+      "Rivers and Tanks",
+      "Geospatial support for CSR activities",
+    ],
     href: "/vasudhayan",
   },
   {
     id: "mandirayan",
-    name: "Mandirayan",
-    subtitle: "Temple Ecosystem Solutions",
+    name: "Mandirayan®™",
+    subtitle: "GeoSpatial Technology based Temple Town Ecosystem Solutions",
     description:
-      "Mandirayan applies precision documentation and digital twin technology to temple complexes — conserving structures, mapping land assets and modernising administration without disturbing tradition.",
-    focus: ["Heritage 3D documentation", "Temple land records", "Conservation planning", "Visitor & facility systems"],
+      "Mandirayan®™, a registered trademark entity, is dedicated to introducing futuristic, technology-driven temple ecosystems using DGPS/CORS, Drone, LiDAR, Close Range Photogrammetry, 360° recordings and GPR.",
+    focus: [
+      "Geo-digital Archival",
+      "2D and 3D Master Plan Preparation",
+      "Asset Inventory and Documentation",
+      "Crowd Management & Footfall Measurement (sensor-based)",
+    ],
     href: "/mandirayan",
   },
 ];
