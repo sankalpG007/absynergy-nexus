@@ -1,16 +1,24 @@
 import {
   Antenna,
+  Aperture,
   Boxes,
+  Brain,
+  Camera,
+  Compass,
   Cpu,
   Globe2,
   Layers,
-  LineChart,
-  Map,
+  Mountain,
   Radar,
   Ruler,
   Satellite,
   Scan,
+  Sparkles,
+  Video,
+  Volume2,
   Waves,
+  Film,
+  Droplets,
   type LucideIcon,
 } from "lucide-react";
 
@@ -20,116 +28,167 @@ export type Technology = {
   icon: LucideIcon;
   summary: string;
   description: string;
-  capabilities: string[];
 };
 
 export const technologies: Technology[] = [
   {
-    id: "gis",
-    name: "GIS",
-    icon: Globe2,
-    summary: "Enterprise spatial data systems",
-    description:
-      "Design and deployment of enterprise GIS: geodatabase schemas, topology rules, multi-user editing workflows and web map services aligned to national spatial data standards.",
-    capabilities: ["Geodatabase design", "Web GIS portals", "Spatial QA/QC", "OGC services"],
-  },
-  {
     id: "remote-sensing",
     name: "Remote Sensing",
     icon: Satellite,
-    summary: "Multispectral earth observation",
+    summary: "Satellite earth observation",
     description:
-      "Optical, thermal and radar imagery analysis for land use classification, change detection, vegetation and moisture indices, and long-horizon environmental monitoring.",
-    capabilities: ["Change detection", "Index modelling", "SAR interferometry", "Time-series analysis"],
+      "Multispectral and radar imagery analysis for land use, change detection, vegetation, water and environmental monitoring across seasons.",
   },
   {
     id: "drone",
-    name: "Drone Technology",
+    name: "DRONE",
     icon: Antenna,
-    summary: "UAV survey and photogrammetry",
+    summary: "DGCA-compliant UAV surveys",
     description:
-      "Regulation-compliant UAV missions producing orthomosaics, digital surface models and volumetric measurements with survey-grade ground control.",
-    capabilities: ["Orthomosaic", "DSM / DTM", "Volumetrics", "Corridor mapping"],
+      "Drone acquisition for mapping, volumetrics, heritage documentation and inspection, flown by certified pilots with survey-grade control.",
   },
   {
     id: "lidar",
     name: "LiDAR",
     icon: Scan,
-    summary: "High-density point cloud capture",
+    summary: "High-density point clouds",
     description:
-      "Aerial and terrestrial laser scanning for terrain, canopy, utility and structural modelling, with classification and feature extraction to client specification.",
-    capabilities: ["Point cloud classification", "Bare-earth DTM", "Feature extraction", "Deformation study"],
+      "Aerial and terrestrial laser scanning for terrain, structures and heritage assets, with classification and feature extraction.",
   },
   {
-    id: "digital-twin",
-    name: "Digital Twin",
-    icon: Boxes,
-    summary: "Living models of physical assets",
+    id: "gis",
+    name: "Geographical Information System (GIS)",
+    icon: Globe2,
+    summary: "Spatial data systems",
     description:
-      "Reality-captured, sensor-linked 3D models of sites and structures that stay current through scheduled re-survey and telemetry integration.",
-    capabilities: ["Reality capture", "Asset registers", "Scenario simulation", "As-built comparison"],
-  },
-  {
-    id: "iot",
-    name: "IoT",
-    icon: Cpu,
-    summary: "Field sensing and telemetry",
-    description:
-      "Instrumentation of sites with water level, quality, weather and structural sensors, streaming into dashboards with alerting and long-term archives.",
-    capabilities: ["Sensor networks", "Edge gateways", "Dashboards", "Automated alerts"],
+      "Geodatabase design, thematic mapping, spatial analysis and web GIS delivery aligned to departmental data standards.",
   },
   {
     id: "gpr",
-    name: "Ground Penetrating Radar",
+    name: "Ground Penetrating Radar (GPR)",
     icon: Radar,
     summary: "Non-invasive subsurface imaging",
     description:
-      "Subsurface investigation for utilities, voids, foundations and archaeological features without excavation, delivered as interpreted profiles and plans.",
-    capabilities: ["Utility detection", "Void mapping", "Foundation study", "Archaeological survey"],
+      "Detection of buried structures, voids, utilities and archaeological features without excavation, delivered as interpreted profiles.",
+  },
+  {
+    id: "gaussian-splat",
+    name: "Gaussian Splat 3D Rendering",
+    icon: Sparkles,
+    summary: "Photoreal 3D scene rendering",
+    description:
+      "Radiance-field based reconstruction producing photorealistic, web-deliverable 3D scenes of sites, temples and structures.",
+  },
+  {
+    id: "short-power-films",
+    name: "Short Power Films",
+    icon: Film,
+    summary: "Project communication films",
+    description:
+      "Short, high-impact films combining aerial footage, data visuals and narrative for stakeholders, trusts and departments.",
+  },
+  {
+    id: "bathymetry",
+    name: "Bathymetry",
+    icon: Waves,
+    summary: "Underwater terrain mapping",
+    description:
+      "Depth surveys of tanks, reservoirs and river reaches to derive capacity, sedimentation and submerged terrain models.",
+  },
+  {
+    id: "close-range-photogrammetry",
+    name: "Close Range Photogrammetry",
+    icon: Camera,
+    summary: "Millimetre-scale documentation",
+    description:
+      "Detailed measurable 3D records of carvings, facades and artefacts from calibrated close-range imagery.",
+  },
+  {
+    id: "dgps-cors",
+    name: "DGPS / CORS",
+    icon: Compass,
+    summary: "Precision positioning control",
+    description:
+      "Continuously operating reference station and differential GNSS control that anchors every survey to a verifiable coordinate framework.",
+  },
+  {
+    id: "digital-twin",
+    name: "3D Digital Twin",
+    icon: Boxes,
+    summary: "Living models of assets",
+    description:
+      "Reality-captured 3D twins of sites and complexes, maintained through re-survey and linked to asset and condition records.",
+  },
+  {
+    id: "agentic-ai",
+    name: "Agentic AI",
+    icon: Brain,
+    summary: "AI-assisted geospatial workflows",
+    description:
+      "AI agents applied to feature extraction, document interpretation and reporting to shorten analysis cycles without losing traceability.",
   },
   {
     id: "hec-ras",
-    name: "HEC-RAS",
-    icon: Waves,
-    summary: "Hydraulic and flood modelling",
+    name: "HEC-RAS Flood Modelling",
+    icon: Droplets,
+    summary: "Hydraulic flood simulation",
     description:
-      "1D/2D unsteady flow modelling of rivers and floodplains to generate inundation extents, depth-velocity grids and structure performance assessments.",
-    capabilities: ["2D unsteady flow", "Inundation mapping", "Breach analysis", "Structure hydraulics"],
+      "1D/2D flow modelling of rivers and floodplains producing inundation extents, depth-velocity grids and scenario comparisons.",
   },
   {
-    id: "3d-mapping",
-    name: "3D Mapping",
+    id: "iot",
+    name: "IoT Sensors for Ambient Enviro Parameters",
+    icon: Cpu,
+    summary: "Continuous environmental sensing",
+    description:
+      "Deployed sensors for air, water, noise and weather parameters, streaming into dashboards with archives and alerting.",
+  },
+  {
+    id: "swat",
+    name: "SWAT Analysis Tool",
     icon: Layers,
-    summary: "Photorealistic spatial models",
+    summary: "Watershed simulation",
     description:
-      "Photogrammetric and scan-based 3D reconstruction of terrain, structures and heritage assets with measurable, textured mesh outputs.",
-    capabilities: ["Mesh reconstruction", "Texture mapping", "Web 3D delivery", "Measurement models"],
+      "Soil and Water Assessment Tool modelling of runoff, sediment yield and land-use scenarios at watershed scale.",
   },
   {
-    id: "cad",
-    name: "CAD",
+    id: "geophysical",
+    name: "Geo Physical Surveys",
+    icon: Mountain,
+    summary: "Subsurface investigation",
+    description:
+      "Resistivity and allied geophysical methods supporting groundwater, geology and foundation investigations.",
+  },
+  {
+    id: "noise",
+    name: "Noise Level Measurement",
+    icon: Volume2,
+    summary: "Acoustic monitoring",
+    description:
+      "Calibrated ambient noise measurement and mapping for compliance, impact assessment and urban studies.",
+  },
+  {
+    id: "360-media",
+    name: "360 Degree Video and Photos",
+    icon: Video,
+    summary: "Immersive site records",
+    description:
+      "360° capture of temple complexes, campuses and project sites for archival, virtual tours and stakeholder review.",
+  },
+  {
+    id: "volumetric-tools",
+    name: "Volumetric and Sub Surface Analysis Tools",
+    icon: Aperture,
+    summary: "Quantity and void analysis",
+    description:
+      "Volume computation for mining and stockpiles, and subsurface interpretation for below-ground-level modelling.",
+  },
+  {
+    id: "dgps",
+    name: "Differential Global Positioning System (DGPS)",
     icon: Ruler,
-    summary: "Engineering drawing and design",
+    summary: "Survey-grade ground control",
     description:
-      "Survey-to-CAD conversion, layered drawing standards, and design coordination outputs compatible with client engineering environments.",
-    capabilities: ["Survey to CAD", "Layer standards", "Plan-profile sets", "BIM handover"],
-  },
-  {
-    id: "spatial-analytics",
-    name: "Spatial Analytics",
-    icon: LineChart,
-    summary: "Decision models on geography",
-    description:
-      "Suitability, accessibility, risk and prioritisation models that translate spatial data into ranked, defensible recommendations.",
-    capabilities: ["Suitability models", "Risk indices", "Network analysis", "Statistical validation"],
-  },
-  {
-    id: "environmental-intelligence",
-    name: "Environmental Intelligence",
-    icon: Map,
-    summary: "Ecosystem and carbon monitoring",
-    description:
-      "Baseline studies, biomass and carbon estimation, wetland health tracking and compliance monitoring backed by field validation.",
-    capabilities: ["Biomass estimation", "Carbon baselines", "Habitat mapping", "Compliance reporting"],
+      "Centimetre-level ground control and boundary verification for mining leases, heritage sites and infrastructure corridors.",
   },
 ];
