@@ -16,11 +16,12 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-brand-gradient text-primary-foreground shadow-[var(--shadow-lift)] transition-[transform,filter] hover:-translate-y-0.5 hover:brightness-110",
+        hero: "bg-cta-gradient text-primary-foreground shadow-[var(--shadow-lift)] transition-[transform,filter] hover:-translate-y-0.5 hover:brightness-105",
         onDark:
           "border border-ink-foreground/25 bg-ink-foreground/10 text-ink-foreground backdrop-blur-md transition-colors hover:bg-ink-foreground/20",
         quiet:
-          "border border-border bg-card text-foreground shadow-[var(--shadow-card)] hover:border-accent/60 hover:text-accent",
+          "border border-earth/30 bg-card text-earth shadow-[var(--shadow-card)] transition-colors hover:border-primary/60 hover:bg-cream hover:text-primary",
+
       },
       size: {
         default: "h-9 px-4 py-2",
