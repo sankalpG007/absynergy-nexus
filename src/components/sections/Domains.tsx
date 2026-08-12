@@ -6,43 +6,35 @@ import { domains } from "@/data/domains";
 
 export function Domains() {
   return (
-    <section id="domains" className="bg-surface py-24 lg:py-32">
+    <section id="domains" className="bg-cream py-28 lg:py-36">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Expert application domains"
-          title="Where our technology is put to work"
-          description="Hover or tap a domain to read the scope of work. Each is delivered by ABsynergy's subject experts with departmental compliance in view."
+          eyebrow="Where we apply it — application domains"
+          title="Expert application domains"
+          description="Each domain is delivered by ABsynergy's subject experts with departmental compliance in view."
         />
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-8">
           {domains.map((domain, index) => {
             const Icon = domain.icon;
             return (
-              <Reveal key={domain.id} delay={(index % 3) * 0.04}>
-                <div className="group h-52 [perspective:1200px]">
-                  <div className="relative size-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-                    <div
-                      tabIndex={0}
-                      className="absolute inset-0 flex flex-col rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] [backface-visibility:hidden]"
-                    >
-                      <Icon className="size-6 text-accent" />
-                      <h3 className="mt-auto font-display text-lg font-semibold leading-snug">
-                        {domain.name}
-                      </h3>
-                    </div>
-                    <div className="absolute inset-0 flex flex-col justify-center rounded-xl border border-accent/40 bg-card p-7 shadow-[var(--shadow-lift)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {domain.description}
-                      </p>
-                      <a
-                        href="#business-enquiry"
-                        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent"
-                      >
-                        Business Enquiry <ArrowRight className="size-4" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <Reveal key={domain.id} delay={(index % 4) * 0.04} className="h-full">
+                <a
+                  href="#business-enquiry"
+                  className="group flex h-full flex-col rounded-2xl border border-earth/15 bg-background/70 p-8 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-background hover:shadow-[var(--shadow-card)] focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  <Icon className="size-6 shrink-0 text-earth transition-colors group-hover:text-primary" />
+                  <h3 className="mt-6 font-display text-lg font-semibold leading-snug">
+                    {domain.name}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {domain.description}
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-earth transition-colors group-hover:text-primary">
+                    Business Enquiry
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
               </Reveal>
             );
           })}
