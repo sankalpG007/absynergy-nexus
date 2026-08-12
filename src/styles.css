@@ -39,6 +39,12 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-emerald: var(--emerald);
   --color-teal: var(--teal);
+  --color-earth: var(--earth-brown);
+  --color-earth-deep: var(--deep-brown);
+  --color-cream: var(--warm-cream);
+  --color-beige: var(--soft-beige);
+  --color-orange-bright: var(--secondary-orange);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
