@@ -23,14 +23,15 @@ export function Hero() {
       <motion.div style={{ y, opacity }} className="absolute inset-0 -z-10">
         <img
           src={heroImage}
-          alt="Abstract terrain mesh and contour visualisation representing geospatial data"
+          alt="Aerial view of an Indian heritage temple complex with geospatial survey and terrain mapping overlays"
           width={1920}
           height={1088}
           className="size-full object-cover"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--primary-deep)_10%,transparent_75%)] opacity-95" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--primary-deep)_2%,transparent_45%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--deep-brown)_8%,color-mix(in_oklab,var(--earth-brown)_70%,transparent)_48%,transparent_82%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--deep-brown)_4%,transparent_52%)]" />
+
       </motion.div>
 
       <div className="section-shell w-full pb-16 pt-32 lg:pb-24 lg:pt-40">
