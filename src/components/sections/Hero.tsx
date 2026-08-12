@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 
-import heroImage from "@/assets/hero-abstract.jpg";
+import heroImage from "@/assets/hero-geo-heritage.jpg";
 import { Counter } from "@/components/site/Counter";
 import { Button } from "@/components/ui/button";
 import { company } from "@/data/company";
