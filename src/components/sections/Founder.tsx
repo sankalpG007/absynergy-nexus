@@ -95,24 +95,35 @@ export function Founder() {
         </div>
       </div>
 
-      <div className="section-shell mt-20">
+      <div className="section-shell mt-24 lg:mt-32">
         <Reveal>
-          <p className="eyebrow">Team & leadership</p>
+          <p className="eyebrow">Team &amp; leadership</p>
           <h3 className="mt-3 text-2xl font-semibold sm:text-3xl">
             Senior advisors, subject experts and associates
           </h3>
         </Reveal>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4">
           {company.team.map((member, index) => (
-            <Reveal key={member.name} delay={(index % 3) * 0.05}>
-              <div className="h-full bg-card p-7 transition-colors hover:bg-background">
-                <p className="font-display text-base font-semibold leading-snug">{member.name}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{member.role}</p>
-              </div>
+            <Reveal key={member.name} delay={(index % 4) * 0.05} className="h-full">
+              <article className="group flex h-full flex-col rounded-2xl border border-earth/15 bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[var(--shadow-card)]">
+                <span className="grid size-14 shrink-0 place-items-center rounded-full bg-beige font-display text-base font-bold text-earth transition-colors group-hover:bg-primary/15 group-hover:text-primary">
+                  {member.name
+                    .replace(/^(Dr\.|Mrs\.|Mr\.|Air Commodore)\s*/i, "")
+                    .split(" ")
+                    .slice(0, 2)
+                    .map((word) => word[0])
+                    .join("")}
+                </span>
+                <p className="mt-6 font-display text-base font-semibold leading-snug">
+                  {member.name}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{member.role}</p>
+              </article>
             </Reveal>
           ))}
         </div>
       </div>
+
     </section>
   );
 }

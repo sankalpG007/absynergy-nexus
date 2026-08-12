@@ -21,42 +21,65 @@ export function BusinessUnits() {
           description="ABsynergy delivers through two specialised units — Vasudhayan (Think Spatial) and Mandirayan®™, a registered trademark entity for temple town ecosystem solutions."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {businessUnits.map((unit, index) => (
-            <Reveal key={unit.id} delay={index * 0.1}>
-              <article className="glass-panel-dark group relative flex h-full flex-col overflow-hidden rounded-2xl p-9 transition-transform duration-500 hover:-translate-y-1.5">
-                <div
-                  aria-hidden
-                  className="absolute -right-24 -top-24 size-64 rounded-full bg-brand-gradient opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-45"
-                />
-                <p className="relative eyebrow">{unit.subtitle}</p>
-                <h3 className="relative mt-4 font-display text-3xl font-semibold sm:text-4xl">
-                  {unit.name}
-                </h3>
-                <p className="relative mt-5 flex-1 text-sm leading-relaxed text-ink-foreground/70">
-                  {unit.description}
-                </p>
-                <ul className="relative mt-7 flex flex-wrap gap-2">
-                  {unit.focus.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full border border-ink-foreground/20 px-3 py-1 text-xs font-medium text-ink-foreground/75"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="relative mt-9">
-                  <Button asChild variant="hero" size="lg">
-                    <Link to={unit.href}>
-                      Know More <ArrowUpRight className="size-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {businessUnits.map((unit, index) => {
+            const isGreen = unit.id === "vasudhayan";
+            return (
+              <Reveal key={unit.id} delay={index * 0.1} className="h-full">
+                <article className="glass-panel-dark group relative flex h-full flex-col overflow-hidden rounded-3xl p-10 transition-transform duration-500 hover:-translate-y-1.5">
+                  <div
+                    aria-hidden
+                    className={`absolute -right-24 -top-24 size-64 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-45 ${
+                      isGreen ? "bg-emerald" : "bg-orange-bright"
+                    }`}
+                  />
+                  <span
+                    className={`relative inline-flex size-12 items-center justify-center rounded-xl font-display text-lg font-bold ${
+                      isGreen
+                        ? "bg-emerald/20 text-emerald"
+                        : "bg-orange-bright/20 text-orange-bright"
+                    }`}
+                  >
+                    {unit.name.charAt(0)}
+                  </span>
+                  <p
+                    className={`relative mt-6 text-xs font-semibold uppercase tracking-[0.16em] ${
+                      isGreen ? "text-emerald" : "text-orange-bright"
+                    }`}
+                  >
+                    {unit.subtitle}
+                  </p>
+                  <h3 className="relative mt-4 font-display text-3xl font-semibold sm:text-4xl">
+                    {unit.name}
+                  </h3>
+                  <p className="relative mt-5 flex-1 text-sm leading-relaxed text-ink-foreground/70">
+                    {unit.description}
+                  </p>
+                  <ul className="relative mt-8 flex flex-wrap gap-2.5">
+                    {unit.focus.map((item) => (
+                      <li
+                        key={item}
+                        className={`rounded-full border px-3.5 py-1.5 text-xs font-medium text-ink-foreground/80 ${
+                          isGreen ? "border-emerald/40" : "border-orange-bright/40"
+                        }`}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="relative mt-10">
+                    <Button asChild variant="hero" size="lg">
+                      <Link to={unit.href}>
+                        Know More <ArrowUpRight className="size-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
+
       </div>
     </section>
   );
