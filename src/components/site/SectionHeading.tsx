@@ -7,6 +7,7 @@ export function SectionHeading({
   description,
   align = "left",
   tone = "light",
+  index,
   className,
 }: {
   eyebrow: string;
@@ -14,17 +15,43 @@ export function SectionHeading({
   description?: string;
   align?: "left" | "center";
   tone?: "light" | "dark";
+  index?: string;
   className?: string;
 }) {
   return (
     <Reveal
       className={cn(
-        "max-w-3xl",
+        "relative max-w-3xl",
         align === "center" && "mx-auto text-center",
         className,
       )}
     >
-      <p className="eyebrow">{eyebrow}</p>
+      <div
+        aria-hidden
+        className={cn(
+          "pointer-events-none absolute -top-16 -z-10 hidden size-52 contour-lines opacity-[0.18] sm:block",
+          align === "center" ? "left-1/2 -translate-x-1/2" : "-left-10",
+        )}
+      />
+      <p
+        className={cn(
+          "flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em]",
+          align === "center" && "justify-center",
+          tone === "dark" ? "text-orange-bright" : "text-accent",
+        )}
+      >
+        {index ? (
+          <>
+            <span className={tone === "dark" ? "text-ink-foreground/50" : "text-earth/60"}>
+              {index}
+            </span>
+            <span aria-hidden className={tone === "dark" ? "text-ink-foreground/30" : "text-earth/30"}>
+              —
+            </span>
+          </>
+        ) : null}
+        <span>{eyebrow}</span>
+      </p>
       <h2
         className={cn(
           "mt-4 text-3xl font-semibold leading-[1.1] sm:text-4xl lg:text-[2.75rem]",

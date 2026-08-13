@@ -278,3 +278,55 @@
     );
   background-size: 72px 72px;
 }
+
+@utility perspective-1000 {
+  perspective: 1400px;
+}
+
+@utility preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+@utility topo-pattern {
+  background-image: repeating-radial-gradient(
+      ellipse at 78% 18%,
+      color-mix(in oklab, var(--primary-orange) 22%, transparent) 0 1px,
+      transparent 1px 22px
+    ),
+    repeating-radial-gradient(
+      ellipse at 12% 82%,
+      color-mix(in oklab, var(--warm-cream) 18%, transparent) 0 1px,
+      transparent 1px 26px
+    );
+}
+
+@utility survey-grid {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in oklab, var(--earth-brown) 12%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--earth-brown) 12%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
