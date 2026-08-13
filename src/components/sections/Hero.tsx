@@ -4,6 +4,8 @@ import { useRef } from "react";
 
 import heroImage from "@/assets/hero-geo-heritage.jpg";
 import { Counter } from "@/components/site/Counter";
+import { GeoLayer } from "@/components/site/GeoLayer";
+
 import { Button } from "@/components/ui/button";
 import { company } from "@/data/company";
 
