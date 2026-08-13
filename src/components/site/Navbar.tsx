@@ -93,7 +93,7 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <Button asChild variant="hero" size="default">
-            <a href="#business-enquiry">Business Enquiry</a>
+            <a href="#business-enquiry">Enquiry Forms</a>
           </Button>
         </div>
 
@@ -126,7 +126,7 @@ export function Navbar() {
             ))}
             <Button asChild variant="hero" size="lg" className="mt-4">
               <a href="#business-enquiry" onClick={() => setOpen(false)}>
-                Business Enquiry
+                Enquiry Forms
               </a>
             </Button>
           </div>
