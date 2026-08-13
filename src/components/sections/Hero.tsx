@@ -31,8 +31,9 @@ export function Hero() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--deep-brown)_8%,color-mix(in_oklab,var(--earth-brown)_70%,transparent)_48%,transparent_82%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--deep-brown)_4%,transparent_52%)]" />
-
+        <GeoLayer />
       </motion.div>
+
 
       <div className="section-shell w-full pb-16 pt-32 lg:pb-24 lg:pt-40">
         <motion.p
