@@ -55,19 +55,28 @@ export function Projects() {
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-lift)]"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-t-xl">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} — ${project.category} project for ${project.client}`}
                     width={1280}
                     height={853}
                     loading="lazy"
-                    className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-[linear-gradient(to_top,var(--deep-brown),transparent_62%)] opacity-70 transition-opacity duration-500 group-hover:opacity-95"
                   />
                   <span className="glass-panel absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold">
                     {project.category}
                   </span>
+                  <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-ink-foreground">
+                    <p className="text-xs font-medium text-ink-foreground/85">{project.client}</p>
+                    <ArrowUpRight className="size-4 shrink-0 text-orange-bright transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </div>
                 </div>
+
                 <div className="flex flex-1 flex-col p-7">
                   <p className="eyebrow">{project.category}</p>
                   <h3 className="mt-3 font-display text-lg font-semibold leading-snug">
