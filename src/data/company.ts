@@ -1,4 +1,4 @@
-import founderImage from "@/assets/founderPassport.png";
+import founderImage from "@/assets/founderGemini.jpg";
 
 export const company = {
   name: "ABsynergy",

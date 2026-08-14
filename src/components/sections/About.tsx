@@ -1,4 +1,14 @@
-import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
+import {
+  ArrowUpRight,
+  CalendarDays,
+  Compass,
+  Database,
+  Eye,
+  Layers3,
+  Sparkles,
+  Target,
+} from "lucide-react";
+
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { company } from "@/data/company";
@@ -27,97 +37,444 @@ export function About() {
         {/* HEADER                                                  */}
         {/* ====================================================== */}
 
-        <SectionHeading
-          eyebrow="About ABsynergy"
-          title="Strategy, foresight, data and research since 2014"
-          description={about.story}
-        />
+        {/* ====================================================== */}
+{/* PREMIUM ABOUT INTRO */}
+{/* ====================================================== */}
+
+<Reveal>
+  <div className="relative overflow-hidden rounded-[2rem] border border-primary/15 bg-gradient-to-br from-background via-[#fffaf3] to-[#f3e6d4] p-8 shadow-[0_20px_70px_rgba(100,55,20,0.08)] sm:p-10 lg:p-14">
+    
+    {/* Decorative background */}
+    <div
+      aria-hidden
+      className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-primary/10 blur-3xl"
+    />
+
+    <div
+      aria-hidden
+      className="pointer-events-none absolute -bottom-32 -left-20 size-64 rounded-full bg-earth/10 blur-3xl"
+    />
+
+    <div className="relative grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+      
+      {/* Main heading */}
+      <div>
+        <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-background/70 px-4 py-2 backdrop-blur">
+          <span className="size-2 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
+
+          <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-earth">
+            About ABsynergy
+          </span>
+
+          <span className="h-3 w-px bg-border" />
+
+          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            Est. 2014
+          </span>
+        </div>
+
+        <h2 className="max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-earth-deep sm:text-5xl lg:text-6xl">
+          Strategy.
+          <span className="text-primary"> Foresight.</span>
+          <br />
+          Data.
+          <span className="text-earth"> Research.</span>
+        </h2>
+
+        <p className="mt-7 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+          {about.story}
+        </p>
+      </div>
+
+      {/* Right-side identity block */}
+      <div className="relative lg:justify-self-end">
+        <div className="relative overflow-hidden rounded-2xl border border-earth/10 bg-earth p-7 text-ink-foreground shadow-[var(--shadow-lift)]">
+          
+          <div
+            aria-hidden
+            className="absolute right-0 top-0 size-40 rounded-full bg-primary/20 blur-3xl"
+          />
+
+          <div className="relative">
+            <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-orange-bright">
+              Scientific & Technical Consultancy
+            </p>
+
+            <p className="mt-5 font-display text-4xl font-bold tracking-tight">
+              12+
+            </p>
+
+            <p className="mt-1 text-sm text-ink-foreground/70">
+              Years of practice
+            </p>
+
+            <div className="my-6 h-px bg-white/10" />
+
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-ink-foreground/70">
+                Projects delivered
+              </span>
+
+              <span className="font-display text-2xl font-semibold text-orange-bright">
+                100+
+              </span>
+            </div>
+
+            <div className="mt-4 flex items-center justify-between">
+              <span className="text-sm text-ink-foreground/70">
+                Specialized units
+              </span>
+
+              <span className="font-display text-2xl font-semibold text-orange-bright">
+                02
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Reveal>
 
         {/* ====================================================== */}
         {/* PRACTICE / VISION / MISSION                            */}
         {/* ====================================================== */}
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
-          <Reveal className="h-full">
-            <div className="surface-card group h-full rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)]">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Our practice</h3>
+        {/* ====================================================== */}
+{/* PRACTICE / VISION / MISSION */}
+{/* ====================================================== */}
 
-                <span className="grid size-10 place-items-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <Sparkles className="size-4" />
-                </span>
-              </div>
+<div className="mt-14 grid gap-6 lg:grid-cols-3">
 
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                {about.who}
-              </p>
-            </div>
-          </Reveal>
+  {/* OUR PRACTICE */}
+  <Reveal className="h-full">
+    <div className="group relative h-full min-h-[340px] overflow-hidden rounded-[1.75rem] border border-earth/10 bg-surface p-8 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_25px_60px_rgba(100,55,20,0.12)] lg:p-9">
 
-          <Reveal delay={0.08} className="h-full">
-            <div className="surface-card group h-full rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)]">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Vision</h3>
+      {/* Large background number */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-4 -top-8 font-display text-[9rem] font-bold leading-none text-primary/[0.045] transition-transform duration-700 group-hover:scale-110"
+      >
+        01
+      </span>
 
-                <span className="grid size-10 place-items-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <ArrowRight className="size-4 -rotate-45" />
-                </span>
-              </div>
+      {/* Decorative glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 bottom-[-5rem] size-44 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:bg-primary/20"
+      />
 
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                {about.vision}
-              </p>
-            </div>
-          </Reveal>
+      <div className="relative flex h-full flex-col">
 
-          <Reveal delay={0.16} className="h-full">
-            <div className="surface-card group h-full rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)]">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Mission</h3>
+        <div className="flex items-start justify-between">
 
-                <span className="grid size-10 place-items-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <CalendarDays className="size-4" />
-                </span>
-              </div>
+          <div className="grid size-14 place-items-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+            <Sparkles className="size-6" />
+          </div>
 
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                {about.mission}
-              </p>
-            </div>
-          </Reveal>
+          <span className="rounded-full border border-border bg-background/70 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-muted-foreground">
+            Identity
+          </span>
+
         </div>
+
+        <div className="mt-10">
+
+          <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary">
+            01 / Our practice
+          </p>
+
+          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-earth-deep">
+            Scientific thinking.
+            <br />
+            Technical execution.
+          </h3>
+
+          <p className="mt-5 text-sm leading-7 text-muted-foreground">
+            {about.who}
+          </p>
+
+        </div>
+
+        <div className="mt-auto pt-8">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-primary transition-all duration-500 group-hover:w-16" />
+            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+              How we work
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </Reveal>
+
+
+  {/* VISION */}
+  <Reveal delay={0.08} className="h-full">
+    <div className="group relative h-full min-h-[340px] overflow-hidden rounded-[1.75rem] border border-earth/10 bg-earth p-8 text-ink-foreground transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(60,35,15,0.22)] lg:p-9">
+
+      {/* Decorative circles */}
+      <div
+        aria-hidden
+        className="absolute -right-16 -top-16 size-48 rounded-full border border-orange-bright/20 transition-transform duration-700 group-hover:scale-125"
+      />
+
+      <div
+        aria-hidden
+        className="absolute -right-6 -top-6 size-28 rounded-full border border-orange-bright/10"
+      />
+
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -bottom-8 -right-2 font-display text-[9rem] font-bold leading-none text-white/[0.035]"
+      >
+        02
+      </span>
+
+      <div className="relative flex h-full flex-col">
+
+        <div className="flex items-start justify-between">
+
+          <div className="grid size-14 place-items-center rounded-2xl bg-orange-bright/10 text-orange-bright ring-1 ring-orange-bright/20 transition-all duration-500 group-hover:scale-110">
+            <Eye className="size-6" />
+          </div>
+
+          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-white/60">
+            Direction
+          </span>
+
+        </div>
+
+        <div className="mt-10">
+
+          <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-orange-bright">
+            02 / Vision
+          </p>
+
+          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">
+            See beyond
+            <br />
+            the immediate.
+          </h3>
+
+          <p className="mt-5 text-sm leading-7 text-white/65">
+            {about.vision}
+          </p>
+
+        </div>
+
+        <div className="mt-auto pt-8">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-orange-bright transition-all duration-500 group-hover:w-16" />
+            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-white/50">
+              Where we're going
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </Reveal>
+
+
+  {/* MISSION */}
+  <Reveal delay={0.16} className="h-full">
+    <div className="group relative h-full min-h-[340px] overflow-hidden rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-[#fff9f0] to-[#f0dfca] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_25px_60px_rgba(100,55,20,0.12)] lg:p-9">
+
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-5 -top-10 font-display text-[9rem] font-bold leading-none text-earth/[0.045] transition-transform duration-700 group-hover:scale-110"
+      >
+        03
+      </span>
+
+      <div
+        aria-hidden
+        className="absolute bottom-[-5rem] left-[-3rem] size-44 rounded-full bg-primary/10 blur-3xl"
+      />
+
+      <div className="relative flex h-full flex-col">
+
+        <div className="flex items-start justify-between">
+
+          <div className="grid size-14 place-items-center rounded-2xl bg-earth text-orange-bright shadow-sm transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+            <Target className="size-6" />
+          </div>
+
+          <span className="rounded-full border border-earth/10 bg-white/50 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-earth/60">
+            Purpose
+          </span>
+
+        </div>
+
+        <div className="mt-10">
+
+          <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary">
+            03 / Mission
+          </p>
+
+          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-earth-deep">
+            Turning intelligence
+            <br />
+            into impact.
+          </h3>
+
+          <p className="mt-5 text-sm leading-7 text-muted-foreground">
+            {about.mission}
+          </p>
+
+        </div>
+
+        <div className="mt-auto pt-8">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-primary transition-all duration-500 group-hover:w-16" />
+            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+              What we deliver
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </Reveal>
+
+</div>
 
         {/* ====================================================== */}
         {/* CORE VALUES                                             */}
         {/* ====================================================== */}
 
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {about.values.map((value, index) => (
+     {/* ====================================================== */}
+{/* ABsynergy PRINCIPLES */}
+{/* ====================================================== */}
+
+<div className="mt-24">
+
+  <Reveal>
+    <div className="relative overflow-hidden rounded-[2rem] border border-earth/10 bg-earth p-8 text-ink-foreground sm:p-10 lg:p-14">
+
+      {/* Background decoration */}
+      <div
+        aria-hidden
+        className="absolute right-[-8rem] top-[-8rem] size-72 rounded-full bg-primary/20 blur-3xl"
+      />
+
+      <div
+        aria-hidden
+        className="absolute bottom-[-10rem] left-[-5rem] size-72 rounded-full bg-orange-bright/10 blur-3xl"
+      />
+
+      <div className="relative grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+
+        <div>
+
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+            <Layers3 className="size-3.5 text-orange-bright" />
+
+            <span className="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-white/60">
+              Our principles
+            </span>
+          </div>
+
+          <h3 className="mt-6 max-w-xl font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            Four principles.
+            <br />
+            <span className="text-orange-bright">
+              One ABsynergy approach.
+            </span>
+          </h3>
+
+          <p className="mt-5 max-w-md text-sm leading-7 text-white/60">
+            The way we think shapes the way we acquire data, apply
+            technology and deliver scientific intelligence.
+          </p>
+
+        </div>
+
+        <div className="hidden justify-end lg:flex">
+          <div className="flex items-center gap-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white/40">
+            <span>Think</span>
+            <ArrowUpRight className="size-4 text-orange-bright" />
+            <span>Measure</span>
+            <ArrowUpRight className="size-4 text-orange-bright" />
+            <span>Understand</span>
+            <ArrowUpRight className="size-4 text-orange-bright" />
+            <span>Deliver</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Principles */}
+      <div className="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        {about.values.map((value, index) => {
+
+          const icons = [
+            Compass,
+            Eye,
+            Database,
+            Sparkles,
+          ];
+
+          const Icon = icons[index] ?? Sparkles;
+
+          return (
             <Reveal
               key={value.title}
-              delay={index * 0.06}
+              delay={index * 0.07}
               className="h-full"
             >
-              <div className="group h-full rounded-2xl border border-border bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-card)]">
-                <div className="flex items-center justify-between">
-                  <span className="font-display text-xs font-semibold tracking-[0.18em] text-accent">
-                    0{index + 1}
-                  </span>
+              <div className="group relative h-full min-h-[245px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-orange-bright/30 hover:bg-white/[0.08]">
 
-                  <span className="h-px w-8 bg-border transition-all duration-300 group-hover:w-12 group-hover:bg-primary" />
+                {/* Number */}
+                <span className="absolute right-4 top-2 font-display text-7xl font-bold leading-none text-white/[0.035] transition-all duration-500 group-hover:text-orange-bright/[0.08]">
+                  0{index + 1}
+                </span>
+
+                <div className="relative">
+
+                  <div className="grid size-11 place-items-center rounded-xl border border-orange-bright/15 bg-orange-bright/10 text-orange-bright transition-all duration-500 group-hover:scale-110">
+                    <Icon className="size-5" />
+                  </div>
+
+                  <p className="mt-7 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-orange-bright">
+                    Principle 0{index + 1}
+                  </p>
+
+                  <h4 className="mt-2 font-display text-xl font-semibold">
+                    {value.title}
+                  </h4>
+
+                  <p className="mt-3 text-sm leading-6 text-white/55">
+                    {value.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-2">
+
+                    <span className="h-px w-6 bg-orange-bright/40 transition-all duration-500 group-hover:w-10 group-hover:bg-orange-bright" />
+
+                    <span className="text-[0.55rem] font-semibold uppercase tracking-[0.16em] text-white/30">
+                      ABsynergy
+                    </span>
+
+                  </div>
+
                 </div>
 
-                <h4 className="mt-5 text-base font-semibold">
-                  {value.title}
-                </h4>
-
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {value.description}
-                </p>
               </div>
             </Reveal>
-          ))}
-        </div>
+          );
+        })}
+
+      </div>
+
+    </div>
+  </Reveal>
+
+</div>
 
         {/* ====================================================== */}
         {/* CHRONOLOGY / TIMELINE                                   */}
