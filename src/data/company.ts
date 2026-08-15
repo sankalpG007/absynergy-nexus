@@ -144,6 +144,7 @@ export const company = {
     { label: "Business Units", href: "#business-units" },
     { label: "Projects", href: "#projects" },
     { label: "Careers", href: "#careers" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Contact", href: "#contact" },
   ],
 };

@@ -408,68 +408,198 @@ export function About() {
       </div>
 
       {/* Principles */}
-      <div className="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {/* ==================================================== */}
+{/* PRINCIPLES — PREMIUM CARD GRID                      */}
+{/* ==================================================== */}
 
-        {about.values.map((value, index) => {
+<div className="relative mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  {about.values.map((value, index) => {
+    const icons = [
+      Compass,
+      Eye,
+      Database,
+      Sparkles,
+    ];
 
-          const icons = [
-            Compass,
-            Eye,
-            Database,
-            Sparkles,
-          ];
+    const Icon = icons[index] ?? Sparkles;
 
-          const Icon = icons[index] ?? Sparkles;
+    return (
+      <Reveal
+        key={value.title}
+        delay={index * 0.08}
+        className="h-full"
+      >
+        <article
+          className="
+            group relative h-full min-h-[260px]
+            overflow-hidden rounded-[1.5rem]
+            border border-[#ead8c2]
+            bg-[#fffaf3]
+            p-7
+            text-earth-deep
+            shadow-[0_12px_35px_rgba(45,25,10,0.12)]
+            transition-all duration-500
+            hover:-translate-y-2
+            hover:border-primary/50
+            hover:bg-white
+            hover:shadow-[0_24px_55px_rgba(45,25,10,0.20)]
+          "
+        >
+          {/* Large background number */}
+          <span
+            aria-hidden
+            className="
+              pointer-events-none absolute
+              -right-2 -top-5
+              font-display text-[7rem]
+              font-bold leading-none
+              text-earth/[0.055]
+              transition-all duration-700
+              group-hover:scale-110
+              group-hover:text-primary/[0.08]
+            "
+          >
+            0{index + 1}
+          </span>
 
-          return (
-            <Reveal
-              key={value.title}
-              delay={index * 0.07}
-              className="h-full"
-            >
-              <div className="group relative h-full min-h-[245px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-orange-bright/30 hover:bg-white/[0.08]">
+          {/* Decorative orange glow */}
+          <div
+            aria-hidden
+            className="
+              pointer-events-none absolute
+              -bottom-16 -right-16
+              size-40 rounded-full
+              bg-primary/10
+              blur-3xl
+              transition-all duration-500
+              group-hover:bg-primary/20
+            "
+          />
 
-                {/* Number */}
-                <span className="absolute right-4 top-2 font-display text-7xl font-bold leading-none text-white/[0.035] transition-all duration-500 group-hover:text-orange-bright/[0.08]">
-                  0{index + 1}
-                </span>
+          {/* Card content */}
+          <div className="relative flex h-full flex-col">
 
-                <div className="relative">
+            {/* Top row */}
+            <div className="flex items-start justify-between">
 
-                  <div className="grid size-11 place-items-center rounded-xl border border-orange-bright/15 bg-orange-bright/10 text-orange-bright transition-all duration-500 group-hover:scale-110">
-                    <Icon className="size-5" />
-                  </div>
-
-                  <p className="mt-7 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-orange-bright">
-                    Principle 0{index + 1}
-                  </p>
-
-                  <h4 className="mt-2 font-display text-xl font-semibold">
-                    {value.title}
-                  </h4>
-
-                  <p className="mt-3 text-sm leading-6 text-white/55">
-                    {value.description}
-                  </p>
-
-                  <div className="mt-6 flex items-center gap-2">
-
-                    <span className="h-px w-6 bg-orange-bright/40 transition-all duration-500 group-hover:w-10 group-hover:bg-orange-bright" />
-
-                    <span className="text-[0.55rem] font-semibold uppercase tracking-[0.16em] text-white/30">
-                      ABsynergy
-                    </span>
-
-                  </div>
-
-                </div>
-
+              {/* Icon */}
+              <div
+                className="
+                  grid size-12 place-items-center
+                  rounded-2xl
+                  border border-primary/20
+                  bg-primary/10
+                  text-primary
+                  transition-all duration-500
+                  group-hover:scale-110
+                  group-hover:rotate-3
+                  group-hover:bg-primary
+                  group-hover:text-white
+                "
+              >
+                <Icon className="size-5" />
               </div>
-            </Reveal>
-          );
-        })}
 
-      </div>
+              {/* Number badge */}
+              <span
+                className="
+                  rounded-full
+                  border border-earth/10
+                  bg-earth/[0.04]
+                  px-3 py-1
+                  text-[0.58rem]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-earth/55
+                  transition-colors duration-300
+                  group-hover:border-primary/20
+                  group-hover:text-primary
+                "
+              >
+                Principle 0{index + 1}
+              </span>
+            </div>
+
+            {/* Text */}
+            <div className="mt-8">
+
+              <p
+                className="
+                  text-[0.58rem]
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-primary
+                "
+              >
+                ABsynergy principle
+              </p>
+
+              <h4
+                className="
+                  mt-2
+                  font-display
+                  text-2xl
+                  font-semibold
+                  tracking-tight
+                  text-earth-deep
+                  transition-colors duration-300
+                  group-hover:text-primary
+                "
+              >
+                {value.title}
+              </h4>
+
+              <p
+                className="
+                  mt-3
+                  text-sm
+                  leading-6
+                  text-earth/70
+                "
+              >
+                {value.description}
+              </p>
+            </div>
+
+            {/* Bottom accent */}
+            <div className="mt-auto flex items-center gap-3 pt-7">
+
+              <span
+                className="
+                  h-[2px]
+                  w-7
+                  rounded-full
+                  bg-primary/40
+                  transition-all duration-500
+                  group-hover:w-12
+                  group-hover:bg-primary
+                "
+              />
+
+              <span
+                className="
+                  text-[0.55rem]
+                  font-semibold
+                  uppercase
+                  tracking-[0.16em]
+                  text-earth/40
+                  transition-colors duration-300
+                  group-hover:text-earth/60
+                "
+              >
+                Strategy • Foresight • Data • Research
+              </span>
+
+            </div>
+
+          </div>
+        </article>
+      </Reveal>
+    );
+  })}
+</div>
 
     </div>
   </Reveal>

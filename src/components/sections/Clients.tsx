@@ -8,7 +8,7 @@ export function Clients() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Clients"
-          title="Trusted by trusts, departments, industry and academia"
+          title="Trusted by industry and academia"
           description="Organisations ABsynergy has delivered geospatial and scientific consultancy work for."
           align="center"
         />
