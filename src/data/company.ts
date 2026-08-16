@@ -119,7 +119,14 @@ export const company = {
     },
     { name: "Nitin Pochalwar", role: "Associate, Drone Pilot" },
     { name: "Mr. Pruthu Deshpande", role: "Associate, Compliances & Regulations" },
-    { name: "Remote Sensing / GIS Associates", role: "Team of Geologists and Geographers" },
+     {
+      name: "Dhanashree Naik",
+      role: "Product Development Associate",
+    },
+     {
+      name: "Sankalp Singh",
+      role: "AI/ML Developer",
+    },
   ],
   contact: {
     phone: "+91 7720046490",
