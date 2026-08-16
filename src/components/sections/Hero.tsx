@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 
-import heroImage from "@/assets/brownEarth.png";
+import heroImage from "@/assets/Background Image for first page crop.png";
 import { Counter } from "@/components/site/Counter";
 import { GeoLayer } from "@/components/site/GeoLayer";
 

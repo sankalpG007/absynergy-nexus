@@ -27,10 +27,10 @@ export const businessUnits: BusinessUnit[] = [
   },
   {
     id: "mandirayan",
-    name: "Mandirayan®™",
+    name: "Mandirayan ™",
     subtitle: "GeoSpatial Technology based Temple Town Ecosystem Solutions",
     description:
-      "Mandirayan®™, a registered trademark entity, is dedicated to introducing futuristic, technology-driven temple ecosystems using DGPS/CORS, Drone, LiDAR, Close Range Photogrammetry, 360° recordings and GPR.",
+      "Mandirayan ™, a registered trademark entity, is dedicated to introducing futuristic, technology-driven temple ecosystems using DGPS/CORS, Drone, LiDAR, Close Range Photogrammetry, 360° recordings and GPR.",
     focus: [
       "Geo-digital Archival",
       "2D and 3D Master Plan Preparation",

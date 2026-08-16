@@ -8,14 +8,14 @@ import labImage from "@/assets/gallery-lab.jpg";
 export type Project = {
   id: string;
   title: string;
-  category: "Vasudhayan" | "Mandirayan®™";
+  category: "Vasudhayan" | "Mandirayan ™";
   image: string;
   client: string;
   technologies: string[];
   description: string;
 };
 
-export const projectCategories = ["All", "Vasudhayan", "Mandirayan®™"] as const;
+export const projectCategories = ["All", "Vasudhayan", "Mandirayan ™"] as const;
 
 export const projects: Project[] = [
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
   {
     id: "mahur-renuka",
     title: "Geodigital Archival of Shree Renuka Temple, Mahur Gadmandir",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: heritageImage,
     client: "Shree Renuka Mata Temple Trust Mahur",
     technologies: ["LiDAR", "DRONE", "Close Range Photogrammetry"],
@@ -149,7 +149,7 @@ export const projects: Project[] = [
   {
     id: "mahur-matrutirtha",
     title: "Geodigital Archival of Shree Matrutirtha Heritage Tank, Mahur",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: floodImage,
     client: "Shree Renuka Mata Temple Trust Mahur",
     technologies: ["Bathymetry", "DRONE", "Photogrammetry"],
@@ -158,7 +158,7 @@ export const projects: Project[] = [
   {
     id: "anandeshwar",
     title: "Drone Survey & Videography of Anandeshwar Temple (ASI Protected)",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: heritageImage,
     client: "MSRDC",
     technologies: ["DRONE", "360 Video"],
@@ -168,7 +168,7 @@ export const projects: Project[] = [
   {
     id: "bhavani-bhatala",
     title: "Drone-Based Documentation of Bhavani Mandir, Bhatala, Warora",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: labImage,
     client: "State Archaeology, Maharashtra",
     technologies: ["DRONE", "Photogrammetry"],
@@ -177,7 +177,7 @@ export const projects: Project[] = [
   {
     id: "mahadeo-bhatala",
     title: "Drone-Based Documentation of Mahadeo Mandir, Bhatala, Warora",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: heritageImage,
     client: "State Archaeology, Maharashtra",
     technologies: ["DRONE", "Photogrammetry"],
@@ -186,7 +186,7 @@ export const projects: Project[] = [
   {
     id: "markandeshwar",
     title: "Drone Survey & Videography of Markandeshwar Temple, Chamorshi (ASI Protected)",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: lidarImage,
     client: "MSRDC",
     technologies: ["DRONE", "360 Video"],
@@ -196,7 +196,7 @@ export const projects: Project[] = [
   {
     id: "ramtek-gad-mandir",
     title: "Drone Survey & Videography of Ramtek Gad Mandir Temple Complex",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: heritageImage,
     client: "NHAI",
     technologies: ["DRONE", "360 Video", "GIS"],
@@ -205,7 +205,7 @@ export const projects: Project[] = [
   {
     id: "kalyaneshwar",
     title: "Drone Survey & Videography of Kalyaneshwar Temple Complex",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: fieldImage,
     client: "Shewalkar Builders, Nagpur",
     technologies: ["DRONE", "Photogrammetry"],
@@ -214,7 +214,7 @@ export const projects: Project[] = [
   {
     id: "murlidhar",
     title: "Drone Survey & Videography of Murlidhar Temple Complex, Nagpur",
-    category: "Mandirayan®™",
+    category: "Mandirayan ™",
     image: labImage,
     client: "VIPL, Nagpur",
     technologies: ["DRONE", "360 Video"],

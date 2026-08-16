@@ -5,13 +5,13 @@ export const faqs: Faq[] = [
     id: "about",
     question: "What is ABsynergy?",
     answer:
-      "Founded in 2014, ABsynergy is a scientific and technical consultancy built on strategy, foresight, data and research. Over 12 years we have delivered 100+ projects through two specialised units — Vasudhayan and Mandirayan®™ (earlier GeoWISE System).",
+      "Founded in 2014, ABsynergy is a scientific and technical consultancy built on strategy, foresight, data and research. Over 12 years we have delivered 100+ projects through two specialised units — Vasudhayan and Mandirayan ™ (earlier GeoWISE System).",
   },
   {
     id: "units",
-    question: "What is the difference between Vasudhayan and Mandirayan®™?",
+    question: "What is the difference between Vasudhayan and Mandirayan ™?",
     answer:
-      "Vasudhayan (Think Spatial) delivers geospatial scientific and technical services across environment, water, mining, forest, urban areas and rivers. Mandirayan®™ is a registered trademark entity dedicated to GeoSpatial Technology based Temple Town Ecosystem Solutions.",
+      "Vasudhayan (Think Spatial) delivers geospatial scientific and technical services across environment, water, mining, forest, urban areas and rivers. Mandirayan ™ is a registered trademark entity dedicated to GeoSpatial Technology based Temple Town Ecosystem Solutions.",
   },
   {
     id: "technologies",

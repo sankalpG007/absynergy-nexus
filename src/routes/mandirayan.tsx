@@ -9,13 +9,13 @@ const unit = businessUnits[1]!;
 export const Route = createFileRoute("/mandirayan")({
   head: () => ({
     meta: [
-      { title: "Mandirayan®™ — Temple Town Ecosystem Solutions | ABsynergy" },
+      { title: "Mandirayan ™ — Temple Town Ecosystem Solutions | ABsynergy" },
       {
         name: "description",
         content:
-          "Mandirayan®™, a business unit of ABsynergy, delivers GeoSpatial Technology based Temple Town Ecosystem Solutions: geo-digital archival, 2D/3D master plans, asset inventory and crowd management.",
+          "Mandirayan ™, a business unit of ABsynergy, delivers GeoSpatial Technology based Temple Town Ecosystem Solutions: geo-digital archival, 2D/3D master plans, asset inventory and crowd management.",
       },
-      { property: "og:title", content: "Mandirayan®™ — Temple Town Ecosystem Solutions | ABsynergy" },
+      { property: "og:title", content: "Mandirayan ™ — Temple Town Ecosystem Solutions | ABsynergy" },
       {
         property: "og:description",
         content:
