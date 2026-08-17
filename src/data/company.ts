@@ -1,5 +1,21 @@
 import founderImage from "@/assets/founderGemini.jpg";
 
+import aditiImage from "@/assets/team/aditi-deshpande.jpeg";
+import ajayImage from "@/assets/team/ajay-deshpande.png";
+import prashantImage from "@/assets/team/prashant-vaidya.jpeg";
+import ameyImage from "@/assets/team/amey-deshpande.jpg";
+import anaghaImage from "@/assets/team/anagha-patil.jpeg";
+import manasImage from "@/assets/team/manas-badge.jpeg";
+import asawariImage from "@/assets/team/asawari-nawre.jpeg";
+import chinmayImage from "@/assets/team/chinmay-kanade.jpg";
+import harshadImage from "@/assets/team/harshad-kadve.jpeg";
+import manojImage from "@/assets/team/manoj-mandavkar.jpg";
+import nitinImage from "@/assets/team/nitin-pochalwar.jpeg";
+import pruthuImage from "@/assets/team/pruthu-deshpande.jpg";
+import vivekImage from "@/assets/team/vivek-dabri.jpeg";
+import dhanashreeImage from "@/assets/team/dhanashree-naik.png";
+import sankalpImage from "@/assets/team/sankalp-singh.jpg";
+
 export const company = {
   name: "ABsynergy",
   legalName: "ABsynergy",
@@ -103,31 +119,82 @@ export const company = {
     ],
   },
   team: [
-    { name: "Mrs. Aditi Deshpande", role: "Founder & Coordinator - ABsynergy" },
-    { name: "Dr. Ajay Deshpande", role: "Founder and CEO" },
-    {
-      name: "Air Commodore Prashant Vaidya (Retd.)",
-      role: "Senior Advisor, Drone technology & Applications",
-    },
-    { name: "Advocate Amey Deshpande", role: "Associate, Project Management Expert" },
-    { name: "Dr. Anagha Patil", role: "Associate, Environment and Biodiversity Expert" },
-    { name: "Dr. Manas Badge", role: "Associate, Forestry and Ecology Expert" },
-    { name: "Mrs. Asawari Nawre", role: "Associate, Water Expert" },
-    {
-      name: "Harshad Kadve",
-      role: "Associate, Aeromodelling instructor and DRONE Pilot Trainer",
-    },
-    { name: "Nitin Pochalwar", role: "Associate, Drone Pilot" },
-    { name: "Mr. Pruthu Deshpande", role: "Associate, Compliances & Regulations" },
-     {
-      name: "Dhanashree Naik",
-      role: "Product Development Associate",
-    },
-     {
-      name: "Sankalp Singh",
-      role: "AI/ML Developer",
-    },
-  ],
+  {
+    name: "Mrs. Aditi Deshpande",
+    role: "Founder & Coordinator - ABsynergy",
+    image: aditiImage,
+  },
+  {
+    name: "Dr. Ajay Deshpande",
+    role: "Founder and CEO",
+    image: ajayImage,
+  },
+  {
+    name: "Air Commodore Prashant Vaidya (Retd.)",
+    role: "Senior Advisor, Drone Technology & Applications",
+    image: prashantImage,
+  },
+  {
+    name: "Advocate Amey Deshpande",
+    role: "Associate, Project Management Expert",
+    image: ameyImage,
+  },
+  {
+    name: "Dr. Anagha Patil",
+    role: "Associate, Environment and Biodiversity Expert",
+    image: anaghaImage,
+  },
+  {
+    name: "Dr. Manas Badge",
+    role: "Associate, Forestry and Ecology Expert",
+    image: manasImage,
+  },
+  {
+    name: "Mrs. Asawari Nawre",
+    role: "Associate, Water Expert",
+    image: asawariImage,
+  },
+   {
+    name: "Mrs Chinmayee Kanade",
+    role: "Principal Consultant – Geography & Geospatial Sciences",
+    image: chinmayImage,
+  },
+  {
+    name: "Harshad Kadve",
+    role: "Associate, Aeromodelling Instructor and DRONE Pilot Trainer",
+    image: harshadImage,
+  },
+   {
+    name: "Mr Manoj Mandavkar",
+    role: "Remote Sensing, GIS & Geoinformatics Specialist",
+    image: manojImage,
+  },
+  {
+    name: "Nitin Pochalwar",
+    role: "Associate, Drone Pilot",
+    image: nitinImage,
+  },
+  {
+    name: "Mr. Pruthu Deshpande",
+    role: "Associate, Compliances & Regulations",
+    image: pruthuImage,
+  },
+   {
+    name: "Mr. Vivek Dabri",
+    role: "___",
+    image: vivekImage,
+  },
+  {
+    name: "Dhanashree Naik",
+    role: "Product Development Associate",
+    image: dhanashreeImage,
+  },
+  {
+    name: "Sankalp Singh",
+    role: "AI/ML Developer",
+    image: sankalpImage,
+  },
+],
   contact: {
     phone: "+91 7720046490",
     whatsapp: "+919422111927",
