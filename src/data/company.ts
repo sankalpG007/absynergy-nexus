@@ -224,3 +224,4 @@ export const company = {
 };
 
 export type Company = typeof company;
+
