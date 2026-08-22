@@ -13,9 +13,11 @@ import {
 } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
-import { SectionHeading } from "@/components/site/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { businessUnits } from "@/data/businessUnits";
+
+import vasudhayanLogo from "@/assets/logo/Vasudhyan_logo.jpg";
+import mandirayanLogo from "@/assets/logo/Mandirayan_logo.jpg";
 
 const vasudhayanIcons = [
   Leaf,
@@ -58,19 +60,21 @@ export function BusinessUnits() {
           backgroundImage:
             "radial-gradient(circle, rgba(241,133,36,0.55) 1px, transparent 1px)",
           backgroundSize: "14px 14px",
-          maskImage: "linear-gradient(to bottom left, black, transparent 75%)",
+          maskImage:
+            "linear-gradient(to bottom left, black, transparent 75%)",
           WebkitMaskImage:
             "linear-gradient(to bottom left, black, transparent 75%)",
         }}
       />
 
-      {/* Bottom-left orange glow (was green) */}
+      {/* Bottom-left orange glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-orange-600/10 blur-[120px]"
       />
 
       <div className="section-shell relative">
+
         {/* =========================================================
             SECTION HEADER
         ========================================================= */}
@@ -89,7 +93,9 @@ export function BusinessUnits() {
               Two specialised units
               <br />
               under one{" "}
-              <span className="text-orange-400">scientific standard.</span>
+              <span className="text-orange-400">
+                scientific standard.
+              </span>
             </h2>
 
             <p className="mt-7 max-w-3xl text-base leading-8 text-white/65 sm:text-lg">
@@ -108,27 +114,52 @@ export function BusinessUnits() {
           {businessUnits.map((unit, index) => {
             const isVasudhayan = unit.id === "vasudhayan";
 
-            const icons = isVasudhayan ? vasudhayanIcons : mandirayanIcons;
+            const icons = isVasudhayan
+              ? vasudhayanIcons
+              : mandirayanIcons;
 
-            // Shared orange theme classes (both units use the same orange styling now)
+            // Select the correct logo
+            const unitLogo = isVasudhayan
+              ? vasudhayanLogo
+              : mandirayanLogo;
+
+            // Shared orange theme
             const cardTheme =
               "border-orange-900/10 bg-[#fff6e9] text-[#4a2918] hover:shadow-[0_30px_80px_rgba(180,80,20,0.22)]";
+
             const decorativePatternBg =
               "bg-[radial-gradient(circle,rgba(220,100,25,0.18)_1px,transparent_1px)]";
+
             const decorativeGlowBg = "bg-orange-300/30";
-            const badgeGradient = "bg-gradient-to-br from-[#ef8123] to-[#b94c0d] text-white";
-            const unitNumberClasses = "border-orange-800/15 text-orange-800/70";
+
+            const badgeGradient =
+              "bg-gradient-to-br from-[#ef8123] to-[#b94c0d]";
+
+            const unitNumberClasses =
+              "border-orange-800/15 text-orange-800/70";
+
             const unitDotBg = "bg-orange-500";
+
             const subtitleColor = "text-orange-700";
+
             const underlineColor = "bg-orange-500";
+
             const descriptionColor = "text-[#4a2918]/70";
+
             const focusItemClasses =
               "border-orange-800/20 bg-white/55 text-orange-950 hover:border-orange-700/40 hover:bg-orange-50";
+
             const bottomIllustrationText = "text-orange-700";
-            const ctaButtonClasses = "bg-[#df6b17] text-white hover:bg-[#c4570c]";
+
+            const ctaButtonClasses =
+              "bg-[#df6b17] text-white hover:bg-[#c4570c]";
 
             return (
-              <Reveal key={unit.id} delay={index * 0.12} className="h-full">
+              <Reveal
+                key={unit.id}
+                delay={index * 0.12}
+                className="h-full"
+              >
                 <article
                   className={`
                     group relative flex h-full min-h-[620px]
@@ -142,6 +173,7 @@ export function BusinessUnits() {
                     ${cardTheme}
                   `}
                 >
+
                   {/* =================================================
                       DECORATIVE PATTERN
                   ================================================= */}
@@ -181,19 +213,48 @@ export function BusinessUnits() {
                   ================================================= */}
 
                   <div className="relative flex items-start justify-between">
-                    {/* Identity Badge */}
+
+                    {/* BUSINESS UNIT LOGO */}
                     <div
                       className={`
-                        grid h-20 w-20 place-items-center
-                        rounded-2xl shadow-lg
-                        transition-transform duration-500
-                        group-hover:scale-105 group-hover:-rotate-2
-                        ${badgeGradient}
+                        relative grid h-20 w-20
+                        place-items-center
+                        overflow-hidden
+                        rounded-2xl
+                        border border-orange-900/10
+                        bg-white
+                        p-2
+                        shadow-lg
+                        transition-all duration-500
+                        group-hover:scale-105
+                        group-hover:-rotate-2
+                        group-hover:shadow-xl
                       `}
                     >
-                      <span className="font-display text-4xl font-semibold">
-                        {unit.name.charAt(0)}
-                      </span>
+                      <img
+                        src={unitLogo}
+                        alt={`${unit.name} logo`}
+                        className="
+                          h-full
+                          w-full
+                          object-contain
+                          rounded-xl
+                          transition-transform
+                          duration-500
+                          group-hover:scale-110
+                        "
+                      />
+
+                      {/* Subtle logo overlay */}
+                      <div
+                        aria-hidden
+                        className="
+                          pointer-events-none
+                          absolute inset-0
+                          rounded-2xl
+                          ring-1 ring-inset ring-black/5
+                        "
+                      />
                     </div>
 
                     {/* Unit Number */}
@@ -211,6 +272,7 @@ export function BusinessUnits() {
                           ${unitDotBg}
                         `}
                       />
+
                       Unit 0{index + 1}
                     </div>
                   </div>
@@ -263,18 +325,22 @@ export function BusinessUnits() {
 
                   <div className="relative mt-8">
                     <p
-                      className={`
-                        mb-4 text-[10px] font-bold uppercase
+                      className="
+                        mb-4
+                        text-[10px]
+                        font-bold
+                        uppercase
                         tracking-[0.18em]
                         text-orange-800/60
-                      `}
+                      "
                     >
                       Core Focus Areas
                     </p>
 
                     <ul className="flex flex-wrap gap-2.5">
                       {unit.focus.map((item, focusIndex) => {
-                        const Icon = icons[focusIndex % icons.length];
+                        const Icon =
+                          icons[focusIndex % icons.length];
 
                         return (
                           <li
@@ -289,6 +355,7 @@ export function BusinessUnits() {
                             `}
                           >
                             <Icon className="h-3.5 w-3.5 shrink-0" />
+
                             <span>{item}</span>
                           </li>
                         );
@@ -321,11 +388,13 @@ export function BusinessUnits() {
                           stroke="currentColor"
                           strokeWidth="2"
                         />
+
                         <path
                           d="M0 165 C80 130 110 150 175 115 C235 82 280 125 330 90 C360 70 380 80 400 55"
                           stroke="currentColor"
                           strokeWidth="1.5"
                         />
+
                         <path
                           d="M0 178 C90 145 125 170 190 130 C250 95 300 140 350 105 C370 90 390 100 400 82"
                           stroke="currentColor"
@@ -344,17 +413,20 @@ export function BusinessUnits() {
                           fill="currentColor"
                           opacity="0.35"
                         />
+
                         <path
                           d="M185 80V62H215V80M180 62L200 35L220 62M190 48L200 20L210 48"
                           stroke="currentColor"
                           strokeWidth="5"
                           strokeLinejoin="round"
                         />
+
                         <path
                           d="M120 170H280M135 150H265"
                           stroke="currentColor"
                           strokeWidth="4"
                         />
+
                         <path
                           d="M155 105V170M245 105V170"
                           stroke="currentColor"
@@ -382,10 +454,22 @@ export function BusinessUnits() {
                     >
                       <Link to={unit.href}>
                         Know More
-                        <ArrowUpRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+
+                        <ArrowUpRight
+                          className="
+                            ml-2
+                            h-4
+                            w-4
+                            transition-transform
+                            duration-300
+                            group-hover/btn:translate-x-1
+                            group-hover/btn:-translate-y-1
+                          "
+                        />
                       </Link>
                     </Button>
                   </div>
+
                 </article>
               </Reveal>
             );
@@ -409,6 +493,7 @@ export function BusinessUnits() {
             </div>
           </div>
         </Reveal>
+
       </div>
     </section>
   );
