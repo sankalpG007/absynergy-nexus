@@ -1,6 +1,6 @@
 import miningImage from "@/assets/project-mining.jpg";
 import floodImage from "@/assets/project-flood.jpg";
-import heritageImage from "@/assets/project-heritage.jpg";
+import heritageImage from "@/assets/wai_project_infographic.jpeg";
 import lidarImage from "@/assets/gallery-lidar.jpg";
 import fieldImage from "@/assets/gallery-field.jpg";
 import labImage from "@/assets/gallery-lab.jpg";
@@ -15,7 +15,7 @@ export type Project = {
   description: string;
 };
 
-export const projectCategories = ["All", "Vasudhayan", "Mandirayan ™"] as const;
+export const projectCategories = ["All", "Vasudhayan", "Mandirayan™"] as const;
 
 export const projects: Project[] = [
   {

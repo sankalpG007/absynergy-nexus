@@ -206,9 +206,8 @@ export const company = {
     mapEmbed:
       "https://www.google.com/maps?q=Nav-Nirman%20Society,%20Pratap%20Nagar,%20Nagpur%20440022&output=embed",
     social: [
-      { label: "Instagram — Vasudhayan", href: "https://www.instagram.com/vasudhayan" },
-      { label: "Instagram — Mandirayan", href: "https://www.instagram.com/mandirayan" },
-      { label: "LinkedIn — Dr. Ajay Deshpande", href: "https://www.linkedin.com/in/ajay-deshpande" },
+     
+      { label: "Instagram — Vasudhayan", href: "https://www.instagram.com/vasudhayan/"},
     ],
   },
   navigation: [
