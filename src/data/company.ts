@@ -208,6 +208,9 @@ export const company = {
     social: [
      
       { label: "Instagram — Vasudhayan", href: "https://www.instagram.com/vasudhayan/"},
+      { label: "Linkedin - Vasudhayan ", href: "https://www.linkedin.com/company/vasudhayan/"},
+      { label: "LinkedIn - Dr Ajay Deshpande  ", href: "https://www.linkedin.com/in/dr-ajay-deshpande-8537561ba/"},
+      { label: "Youtube ", href: "https://www.youtube.com/@ABsynergy.Nagpur"},
     ],
   },
   navigation: [
