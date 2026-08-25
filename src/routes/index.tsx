@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { About } from "@/components/sections/About";
-import { Achievements } from "@/components/sections/Achievements";
 import { BusinessUnits } from "@/components/sections/BusinessUnits";
 import { Career } from "@/components/sections/Career";
 import { Clients } from "@/components/sections/Clients";
@@ -76,7 +75,7 @@ function Home() {
       <main>
         <Hero />
         <About />
-        <Achievements />
+        
         <Founder />
         <Technologies />
         <Domains />

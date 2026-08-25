@@ -14,7 +14,7 @@ export function Career() {
         <SectionHeading
           eyebrow="Career & training"
           title="Internships, training and capacity building"
-          description="ABsynergy runs online and offline internships and training courses across engineering, sciences and ITI streams, including DGCA drone pilot licencing in collaboration."
+          description="ABsynergy conducts online / offline internships and training courses across engineering and science streams. "
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

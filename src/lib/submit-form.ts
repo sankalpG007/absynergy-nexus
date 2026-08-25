@@ -1,11 +1,11 @@
-const ENDPOINT = import.meta.env["VITE_GOOGLE_APPS_SCRIPT_URL"] as string | undefined;
+const ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbws1tVw0qlD7YUrm4CG3OByu-fy05MFg6uYdE4Fcu-gsrJR673aJZ8WTLtgnN-fb8ol/exec";
 
-export type SubmissionResult = { ok: boolean; message: string };
+export type SubmissionResult = {
+  ok: boolean;
+  message: string;
+};
 
-/**
- * Posts a form payload to the configured Google Apps Script web app endpoint.
- * Set VITE_GOOGLE_APPS_SCRIPT_URL to the deployed script URL.
- */
 export async function submitForm(
   formType: string,
   payload: Record<string, string>,
@@ -14,26 +14,41 @@ export async function submitForm(
     return {
       ok: false,
       message:
-        "Form endpoint is not configured yet. Please email absynergy.nagpur@gmail.com or call us directly.",
+        "Form endpoint is not configured. Please email absynergy.nagpur@gmail.com.",
     };
   }
 
   try {
+    const body = new URLSearchParams();
+
+    body.append("formType", formType);
+    body.append("submittedAt", new Date().toISOString());
+
+    Object.entries(payload).forEach(([key, value]) => {
+      body.append(key, value ?? "");
+    });
+
     await fetch(ENDPOINT, {
       method: "POST",
       mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({
-        formType,
-        submittedAt: new Date().toISOString(),
-        ...payload,
-      }),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      },
+      body: body.toString(),
     });
-    return { ok: true, message: "Thank you. Our team will respond within one working day." };
-  } catch {
+
+    return {
+      ok: true,
+      message:
+        "Thank you. Our team will respond within one working day.",
+    };
+  } catch (error) {
+    console.error("Google Apps Script submission error:", error);
+
     return {
       ok: false,
-      message: "We could not send your message. Please try again or email absynergy.nagpur@gmail.com.",
+      message:
+        "We could not send your message. Please try again or email absynergy.nagpur@gmail.com.",
     };
   }
 }

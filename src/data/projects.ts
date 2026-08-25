@@ -1,6 +1,6 @@
 import miningImage from "@/assets/project-mining.jpg";
 import floodImage from "@/assets/project-flood.jpg";
-import heritageImage from "@/assets/wai_project_infographic.jpeg";
+import heritageImage from "@/assets/Slide1.JPG.jpeg";
 import lidarImage from "@/assets/gallery-lidar.jpg";
 import fieldImage from "@/assets/gallery-field.jpg";
 import labImage from "@/assets/gallery-lab.jpg";

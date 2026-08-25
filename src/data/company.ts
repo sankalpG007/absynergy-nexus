@@ -110,7 +110,6 @@ export const company = {
         year: "Guardian Scientist",
         text: "Guardian Scientist for Geology, Mining and Archaeology, and for strategic applications for the Police and Home Department, Government of Maharashtra.",
       },
-      { year: "2014", text: "Founded ABsynergy as a scientific and technical consultancy." },
     ],
     awards: [
       "National e-Governance Gold Award",
