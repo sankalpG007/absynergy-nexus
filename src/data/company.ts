@@ -3,18 +3,18 @@ import founderImage from "@/assets/founderGemini.jpg";
 import aditiImage from "@/assets/team/aditi-deshpande.jpeg";
 import ajayImage from "@/assets/team/ajay-deshpande.png";
 import prashantImage from "@/assets/team/prashant-vaidya.jpeg";
-import ameyImage from "@/assets/team/amey-deshpande.jpg";
+import ameyImage from "@/assets/team/amey-deshpande.jpeg";
 import anaghaImage from "@/assets/team/anagha-patil.jpeg";
 import manasImage from "@/assets/team/manas-badge.jpeg";
 import asawariImage from "@/assets/team/asawari-nawre.jpeg";
-import chinmayImage from "@/assets/team/chinmay-kanade.jpeg";
+import chinmayImage from "@/assets/team/chinmay-kanade.jpeg"; 
 import harshadImage from "@/assets/team/harshad-kadve.jpeg";
 import manojImage from "@/assets/team/manoj-mandavkar.jpg";
 import nitinImage from "@/assets/team/nitin-pochalwar.jpeg";
 import pruthuImage from "@/assets/team/pruthu-deshpande.jpg";
 import vivekImage from "@/assets/team/vivek-dabri.jpeg";
 import dhanashreeImage from "@/assets/team/dhanashree-naik.jpeg";
-import sankalpImage from "@/assets/team/sankalp-singh.jpg";
+import sankalpImage from "@/assets/team/sankalp-singh.jpeg";
 
 export const company = {
   name: "ABsynergy",
