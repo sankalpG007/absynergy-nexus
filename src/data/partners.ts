@@ -1,4 +1,4 @@
-import srushtiSevaLogo from "@/assets/partners/1. srushti-seva-pvt-ltd-logo.jpg";
+import srushtiSevaLogo from "@/assets/partners/1. srushti-seva-pvt-ltd-logo.jpeg";
 import pmiLogo from "@/assets/partners/2. PMI logo.jpg";
 import sakhaStudioLogo from "@/assets/partners/3. Sakha Studio.jpg";
 import stambhaStudioLogo from "@/assets/partners/4. stambha conservation studio.jpg";
