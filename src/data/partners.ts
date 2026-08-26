@@ -82,7 +82,7 @@ export const partners: Partner[] = [
  */
 
 import worldMonumentFund from "@/assets/organizations/world-monument-fund.webp";
-import renukaMataTrust from "@/assets/organizations/renuka-mata-trust.jpg";
+import renukaMataTrust from "@/assets/organizations/renuka-mata-trust.webp";
 import shewalkarBuilders from "@/assets/organizations/shewalkar-builders.jpg";
 import sujalamConsultants from "@/assets/organizations/sujalam-consultants.jpg";
 import dronah from "@/assets/organizations/dronah.jpg";

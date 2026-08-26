@@ -53,12 +53,12 @@ export function Clients() {
             >
               <article
                 className="
-                  group relative flex h-full min-h-[245px]
+                  group relative flex h-full min-h-[255px]
                   flex-col items-center justify-between
                   overflow-hidden rounded-[1.5rem]
                   border border-[#ead8c2]
                   bg-[#fffaf3]
-                  px-6 py-7
+                  px-6 py-6
                   text-center
                   shadow-[0_10px_30px_rgba(45,25,10,0.06)]
                   transition-all duration-500
@@ -100,32 +100,43 @@ export function Clients() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
+
+                {/* CONTENT */}
                 <div className="relative flex w-full flex-col items-center">
 
-                  {/* LOGO CONTAINER */}
+                  {/* ==============================
+                      LARGE LOGO AREA
+                  =============================== */}
                   <div
                     className="
-                      relative grid size-24
-                      place-items-center
+                      relative flex
+                      h-[120px]
+                      w-[180px]
+                      items-center
+                      justify-center
                       overflow-hidden
                       rounded-2xl
                       border border-[#ead8c2]
                       bg-white
-                      p-4
+                      px-3
+                      py-2
                       shadow-[0_8px_25px_rgba(80,45,20,0.08)]
-                      transition-all duration-500
-                      group-hover:scale-105
+                      transition-all
+                      duration-500
+                      group-hover:scale-[1.03]
                       group-hover:border-primary/30
                       group-hover:shadow-[0_12px_30px_rgba(80,45,20,0.14)]
                     "
                   >
+
                     {client.image ? (
                       <img
                         src={client.image}
                         alt={`${client.name} logo`}
                         className="
-                          max-h-full
-                          max-w-full
+                          block
+                          h-full
+                          w-full
                           object-contain
                           transition-transform
                           duration-500
@@ -137,7 +148,7 @@ export function Clients() {
                       <span
                         className="
                           font-display
-                          text-xl
+                          text-2xl
                           font-bold
                           tracking-tight
                           text-earth
@@ -155,7 +166,7 @@ export function Clients() {
                       </span>
                     )}
 
-                    {/* Inner logo highlight */}
+                    {/* Inner highlight */}
                     <div
                       aria-hidden
                       className="
@@ -167,10 +178,11 @@ export function Clients() {
                     />
                   </div>
 
+
                   {/* ORGANISATION TYPE */}
                   <p
                     className="
-                      mt-5
+                      mt-4
                       text-[0.58rem]
                       font-bold
                       uppercase
@@ -181,11 +193,12 @@ export function Clients() {
                     {client.kind}
                   </p>
 
-                  {/* NAME */}
+
+                  {/* CLIENT NAME */}
                   <h3
                     className="
                       mt-2
-                      max-w-[240px]
+                      max-w-[250px]
                       text-sm
                       font-semibold
                       leading-6
@@ -197,30 +210,12 @@ export function Clients() {
                   >
                     {client.name}
                   </h3>
+
                 </div>
 
+
                 {/* BOTTOM ACCENT */}
-                <div className="relative mt-6 flex w-full items-center justify-center gap-3">
-                  <span
-                    className="
-                      h-[2px]
-                      w-7
-                      rounded-full
-                      bg-primary/25
-                      transition-all
-                      duration-500
-                      group-hover:w-12
-                      group-hover:bg-primary
-                    "
-                  />
-
-                  <span
-                    className="
-                      size-1
-                      rounded-full
-                      bg-primary/40
-                    "
-                  />
+                <div className="relative mt-5 flex w-full items-center justify-center gap-3">
 
                   <span
                     className="
@@ -234,6 +229,22 @@ export function Clients() {
                       group-hover:bg-primary
                     "
                   />
+
+                  <span className="size-1 rounded-full bg-primary/40" />
+
+                  <span
+                    className="
+                      h-[2px]
+                      w-7
+                      rounded-full
+                      bg-primary/25
+                      transition-all
+                      duration-500
+                      group-hover:w-12
+                      group-hover:bg-primary
+                    "
+                  />
+
                 </div>
 
               </article>
