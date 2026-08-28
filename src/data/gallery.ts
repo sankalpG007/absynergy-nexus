@@ -40,7 +40,7 @@ export const galleryItems: GalleryItem[] = [
     image: labImage,
 
     // Replace with your actual Pixieset URL if this belongs to photography
-    href: " https://absynergy4.pixieset.com",
+    href: "https://drive.google.com/drive/folders/1ErkDJp_3jppVUtZwzeeETJmUpnBxU7B7?usp=sharing",
   },
 
   {
@@ -75,7 +75,7 @@ export const galleryItems: GalleryItem[] = [
     image: floodImage,
 
     // Replace with your actual Google Drive folder
-    href: "https://drive.google.com/drive/folders/YOUR_FOLDER_ID",
+    href: "https://drive.google.com/drive/folders/1ErkDJp_3jppVUtZwzeeETJmUpnBxU7B7?usp=sharing",
   },
 
   {
@@ -86,7 +86,7 @@ export const galleryItems: GalleryItem[] = [
     image: fieldImage,
 
     // Replace with your actual Medium publication/profile
-    href: "https://medium.com/@YOUR_USERNAME",
+    href: "https://drive.google.com/drive/folders/1ErkDJp_3jppVUtZwzeeETJmUpnBxU7B7?usp=sharing",
 
     span: "wide",
   },
