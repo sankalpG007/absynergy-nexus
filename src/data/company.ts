@@ -206,8 +206,8 @@ export const company = {
       "https://www.google.com/maps?q=Nav-Nirman%20Society,%20Pratap%20Nagar,%20Nagpur%20440022&output=embed",
     social: [
      
-      { label: "Instagram — Vasudhayan", href: "https://www.instagram.com/vasudhayan/"},
-      { label: "Linkedin - Vasudhayan ", href: "https://www.linkedin.com/company/vasudhayan/"},
+      { label: "Instagram", href: "https://www.instagram.com/vasudhayan/"},
+      { label: "Linkedin - ABsynergy ", href: "https://www.linkedin.com/company/vasudhayan/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAT9JypwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABp3XiEuJVsWOy05MpHfKXWrNm9FMQJeI3x1Lw0z4QQ1vwFFFD4EggyGItPENR_aem_R7KQmFn1qsDVTb44F-Zk_w"},
       { label: "LinkedIn - Dr Ajay Deshpande  ", href: "https://www.linkedin.com/in/dr-ajay-deshpande-8537561ba/"},
       { label: "Youtube ", href: "https://www.youtube.com/@ABsynergy.Nagpur"},
     ],

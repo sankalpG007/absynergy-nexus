@@ -215,47 +215,50 @@ export function BusinessUnits() {
                   <div className="relative flex items-start justify-between">
 
                     {/* BUSINESS UNIT LOGO */}
-                    <div
-                      className={`
-                        relative grid h-20 w-20
-                        place-items-center
-                        overflow-hidden
-                        rounded-2xl
-                        border border-orange-900/10
-                        bg-white
-                        p-2
-                        shadow-lg
-                        transition-all duration-500
-                        group-hover:scale-105
-                        group-hover:-rotate-2
-                        group-hover:shadow-xl
-                      `}
-                    >
-                      <img
-                        src={unitLogo}
-                        alt={`${unit.name} logo`}
-                        className="
-                          h-full
-                          w-full
-                          object-contain
-                          rounded-xl
-                          transition-transform
-                          duration-500
-                          group-hover:scale-110
-                        "
-                      />
+<div
+  className={`
+    relative grid
+    h-28 w-28
+    sm:h-32 sm:w-32
+    lg:h-36 lg:w-36
+    place-items-center
+    overflow-hidden
+    rounded-2xl
+    border border-orange-900/10
+    bg-white
+    p-1.5
+    shadow-[0_12px_30px_rgba(80,45,20,0.12)]
+    transition-all duration-500
+    group-hover:scale-105
+    group-hover:-rotate-1
+    group-hover:shadow-[0_18px_40px_rgba(80,45,20,0.18)]
+  `}
+>
+  <img
+    src={unitLogo}
+    alt={`${unit.name} logo`}
+    className="
+      h-full
+      w-full
+      rounded-xl
+      object-contain
+      transition-transform
+      duration-500
+      group-hover:scale-105
+    "
+  />
 
-                      {/* Subtle logo overlay */}
-                      <div
-                        aria-hidden
-                        className="
-                          pointer-events-none
-                          absolute inset-0
-                          rounded-2xl
-                          ring-1 ring-inset ring-black/5
-                        "
-                      />
-                    </div>
+  {/* Subtle logo highlight */}
+  <div
+    aria-hidden
+    className="
+      pointer-events-none
+      absolute inset-0
+      rounded-2xl
+      ring-1 ring-inset ring-black/5
+    "
+  />
+</div>
 
                     {/* Unit Number */}
                     <div

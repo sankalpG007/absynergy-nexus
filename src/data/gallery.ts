@@ -27,7 +27,7 @@ export const galleryItems: GalleryItem[] = [
     image: heritageImage,
 
     // Replace with your actual Pixieset URL
-    href: "https://your-pixieset-link-here.com",
+    href: " https://absynergy4.pixieset.com",
 
     span: "wide",
   },
@@ -40,7 +40,7 @@ export const galleryItems: GalleryItem[] = [
     image: labImage,
 
     // Replace with your actual Pixieset URL if this belongs to photography
-    href: "https://your-pixieset-link-here.com",
+    href: " https://absynergy4.pixieset.com",
   },
 
   {
@@ -64,7 +64,7 @@ export const galleryItems: GalleryItem[] = [
     image: miningImage,
 
     // Replace with your actual Pixieset URL
-    href: "https://your-pixieset-link-here.com",
+    href: " https://absynergy4.pixieset.com",
   },
 
   {
