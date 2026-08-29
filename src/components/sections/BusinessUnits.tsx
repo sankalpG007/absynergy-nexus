@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   Droplets,
@@ -99,9 +98,9 @@ export function BusinessUnits() {
             </h2>
 
             <p className="mt-7 max-w-3xl text-base leading-8 text-white/65 sm:text-lg">
-              ABsynergy delivers through two specialised units — Vasudhayan
-              (Think Spatial) and Mandirayan™, a registered trademark entity
-              for temple town ecosystem solutions.
+              ABsynergy delivers through two specialised units —
+              Vasudhayan (Think Spatial) and Mandirayan™, a registered
+              trademark entity for temple town ecosystem solutions.
             </p>
           </div>
         </Reveal>
@@ -131,9 +130,6 @@ export function BusinessUnits() {
               "bg-[radial-gradient(circle,rgba(220,100,25,0.18)_1px,transparent_1px)]";
 
             const decorativeGlowBg = "bg-orange-300/30";
-
-            const badgeGradient =
-              "bg-gradient-to-br from-[#ef8123] to-[#b94c0d]";
 
             const unitNumberClasses =
               "border-orange-800/15 text-orange-800/70";
@@ -215,50 +211,50 @@ export function BusinessUnits() {
                   <div className="relative flex items-start justify-between">
 
                     {/* BUSINESS UNIT LOGO */}
-<div
-  className={`
-    relative grid
-    h-28 w-28
-    sm:h-32 sm:w-32
-    lg:h-36 lg:w-36
-    place-items-center
-    overflow-hidden
-    rounded-2xl
-    border border-orange-900/10
-    bg-white
-    p-1.5
-    shadow-[0_12px_30px_rgba(80,45,20,0.12)]
-    transition-all duration-500
-    group-hover:scale-105
-    group-hover:-rotate-1
-    group-hover:shadow-[0_18px_40px_rgba(80,45,20,0.18)]
-  `}
->
-  <img
-    src={unitLogo}
-    alt={`${unit.name} logo`}
-    className="
-      h-full
-      w-full
-      rounded-xl
-      object-contain
-      transition-transform
-      duration-500
-      group-hover:scale-105
-    "
-  />
+                    <div
+                      className={`
+                        relative grid
+                        h-28 w-28
+                        sm:h-32 sm:w-32
+                        lg:h-36 lg:w-36
+                        place-items-center
+                        overflow-hidden
+                        rounded-2xl
+                        border border-orange-900/10
+                        bg-white
+                        p-1.5
+                        shadow-[0_12px_30px_rgba(80,45,20,0.12)]
+                        transition-all duration-500
+                        group-hover:scale-105
+                        group-hover:-rotate-1
+                        group-hover:shadow-[0_18px_40px_rgba(80,45,20,0.18)]
+                      `}
+                    >
+                      <img
+                        src={unitLogo}
+                        alt={`${unit.name} logo`}
+                        className="
+                          h-full
+                          w-full
+                          rounded-xl
+                          object-contain
+                          transition-transform
+                          duration-500
+                          group-hover:scale-105
+                        "
+                      />
 
-  {/* Subtle logo highlight */}
-  <div
-    aria-hidden
-    className="
-      pointer-events-none
-      absolute inset-0
-      rounded-2xl
-      ring-1 ring-inset ring-black/5
-    "
-  />
-</div>
+                      {/* Subtle logo highlight */}
+                      <div
+                        aria-hidden
+                        className="
+                          pointer-events-none
+                          absolute inset-0
+                          rounded-2xl
+                          ring-1 ring-inset ring-black/5
+                        "
+                      />
+                    </div>
 
                     {/* Unit Number */}
                     <div
@@ -455,7 +451,12 @@ export function BusinessUnits() {
                         ${ctaButtonClasses}
                       `}
                     >
-                      <Link to={unit.href}>
+                      <a
+                        href={unit.brochure}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${unit.name} brochure`}
+                      >
                         Know More
 
                         <ArrowUpRight
@@ -469,7 +470,7 @@ export function BusinessUnits() {
                             group-hover/btn:-translate-y-1
                           "
                         />
-                      </Link>
+                      </a>
                     </Button>
                   </div>
 

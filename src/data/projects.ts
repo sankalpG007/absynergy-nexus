@@ -8,7 +8,6 @@ import sataraLeasesImage from "@/assets/projects/7. DGPS and DRONE Survey of 3 l
 import gosekhurdPaddyImage from "@/assets/projects/8. Data recording, Mapping, analysis of Summer Paddy from the Water of Gosekhurd Dam and preparation of power documentary as visual evid.JPG.jpeg";
 import jehangirMahalImage from "@/assets/projects/9. GPR Survey at Jehnagir Mahal (State protected monument) Orchha Distt Niwari, Madhya Pradesh..JPG.jpeg";
 import yavatmalQuarriesImage from "@/assets/projects/10. Drone Survey of Stone Quarries at Mouza Ner and Narsala, Yavatmal for volume Estimation.JPG.jpeg";
-import ramtekRopewayImage from "@/assets/projects/11. project-heritage.jpg";
 import baranjCoalBlockImage from "@/assets/projects/12. Baranj Coal Block, Bhadrawati, M.S. DRONE SURVEY.JPG.jpeg";
 import takliJenaImage from "@/assets/projects/13. Takli Jena Bellora block, Bhadrawati, M. S. DRONE SURVEY.JPG.jpeg";
 import ameliyaCoalBlockImage from "@/assets/projects/14 Ameliya Coal Block, Siddhi District, M. P. DRONE SURVEY.JPG.jpeg";
@@ -238,21 +237,7 @@ export const projects: Project[] = [
       "Drone survey of stone quarries at Mouza Ner and Narsala, Yavatmal for volume estimation.",
   },
 
-  {
-    id: "ramtek-ropeway-hia",
-    title:
-      "Drone Survey for Heritage Impact Assessment of Ramtek Gad Mandir Ropeway",
-    category: "Vasudhayan",
-    image: ramtekRopewayImage,
-    client: "NHAI",
-    technologies: [
-      "DRONE",
-      "Heritage Impact Assessment",
-      "Spatial Analysis",
-    ],
-    description:
-      "Drone-based spatial survey supporting the heritage impact assessment of the proposed Ramtek Gad Mandir ropeway.",
-  },
+  
 
   {
     id: "baranj-coal-block",
