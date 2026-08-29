@@ -1,7 +1,7 @@
 import fieldImage from "@/assets/gallery-field.jpg";
-import labImage from "@/assets/gallery-lab.jpg";
+
 import lidarImage from "@/assets/gallery-lidar.jpg";
-import miningImage from "@/assets/project-mining.jpg";
+
 import floodImage from "@/assets/project-flood.jpg";
 import heritageImage from "@/assets/project-heritage.jpg";
 
@@ -33,17 +33,6 @@ export const galleryItems: GalleryItem[] = [
   },
 
   {
-    id: "3d-html",
-    title: "3D HTML / Three.js outputs",
-    caption: "Web-deliverable digital twins and Gaussian splat scenes",
-    type: "image",
-    image: labImage,
-
-    // Replace with your actual Pixieset URL if this belongs to photography
-    href: "https://drive.google.com/drive/folders/1ErkDJp_3jppVUtZwzeeETJmUpnBxU7B7?usp=sharing",
-  },
-
-  {
     id: "drone-video",
     title: "Short power films & 360° videography",
     caption: "Videos · Sitaburdi Fort campus, Nagpur",
@@ -54,17 +43,6 @@ export const galleryItems: GalleryItem[] = [
     href: "https://www.youtube.com/@ABsynergy.Nagpur",
 
     span: "tall",
-  },
-
-  {
-    id: "mining-survey",
-    title: "Mining block drone survey",
-    caption: "Photos · Volume estimation for MoEF clearances",
-    type: "image",
-    image: miningImage,
-
-    // Replace with your actual Pixieset URL
-    href: " https://absynergy4.pixieset.com",
   },
 
   {
