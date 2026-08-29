@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { company } from "@/data/company";
+import absynergyLogo from "@/assets/logo/ABsynergy_logo.jpeg";
 import { cn } from "@/lib/utils";
 
 const sectionIds = company.navigation.map((item) => item.href.replace("#", ""));
@@ -15,8 +16,11 @@ export function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -26,19 +30,31 @@ export function Navbar() {
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id);
+
+        if (visible) {
+          setActive(visible.target.id);
+        }
       },
-      { rootMargin: "-45% 0px -50% 0px", threshold: [0, 0.25, 0.5] },
+      {
+        rootMargin: "-45% 0px -50% 0px",
+        threshold: [0, 0.25, 0.5],
+      },
     );
+
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
-      if (el) observer.observe(el);
+
+      if (el) {
+        observer.observe(el);
+      }
     });
+
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -48,27 +64,81 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "glass-panel border-x-0 border-t-0 py-2" : "border-transparent py-4",
+        scrolled
+          ? "glass-panel border-x-0 border-t-0 py-2"
+          : "border-transparent py-4",
       )}
     >
-      <nav className="section-shell flex items-center justify-between gap-4" aria-label="Primary">
-        <Link to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid size-9 shrink-0 place-items-center rounded-md bg-brand-gradient text-sm font-bold text-primary-foreground">
-            AB
+      <nav
+        className="section-shell flex items-center justify-between gap-4"
+        aria-label="Primary"
+      >
+        {/* =========================================================
+            LOGO + COMPANY NAME
+        ========================================================= */}
+
+        <Link
+          to="/"
+          className="flex min-w-0 items-center gap-3"
+          onClick={() => setOpen(false)}
+        >
+          {/* Client Logo */}
+          <span
+            className="
+              flex
+              size-10
+              shrink-0
+              items-center
+              justify-center
+              overflow-hidden
+              rounded-md
+              bg-white
+              shadow-sm
+            "
+          >
+            <img
+              src={absynergyLogo}
+              alt="ABsynergy"
+              className="size-full object-contain"
+              width={80}
+              height={80}
+            />
           </span>
+
+          {/* Company Name */}
           <span className="min-w-0">
-            <span className={cn("block truncate font-display text-base font-semibold leading-tight", scrolled ? "text-foreground" : "text-ink-foreground")}>
+            <span
+              className={cn(
+                "block truncate font-display text-base font-semibold leading-tight",
+                scrolled
+                  ? "text-foreground"
+                  : "text-ink-foreground",
+              )}
+            >
               {company.name}
             </span>
-            <span className={cn("block truncate text-[0.65rem] uppercase tracking-[0.18em]", scrolled ? "text-muted-foreground" : "text-ink-foreground/60")}>
+
+            <span
+              className={cn(
+                "block truncate text-[0.65rem] uppercase tracking-[0.18em]",
+                scrolled
+                  ? "text-muted-foreground"
+                  : "text-ink-foreground/60",
+              )}
+            >
               Scientific and Technical Consultancy
             </span>
           </span>
         </Link>
 
+        {/* =========================================================
+            DESKTOP NAVIGATION
+        ========================================================= */}
+
         <div className="hidden items-center gap-1 lg:flex">
           {company.navigation.map((item) => {
             const id = item.href.replace("#", "");
+
             return (
               <a
                 key={item.href}
@@ -83,6 +153,7 @@ export function Navbar() {
                 )}
               >
                 {item.label}
+
                 {active === id ? (
                   <span className="absolute inset-x-3 -bottom-0.5 h-px bg-accent" />
                 ) : null}
@@ -91,11 +162,19 @@ export function Navbar() {
           })}
         </div>
 
+        {/* =========================================================
+            ENQUIRY BUTTON
+        ========================================================= */}
+
         <div className="hidden lg:block">
           <Button asChild variant="hero" size="default">
             <a href="#business-enquiry">Enquiry Forms</a>
           </Button>
         </div>
+
+        {/* =========================================================
+            MOBILE MENU BUTTON
+        ========================================================= */}
 
         <button
           type="button"
@@ -104,12 +183,22 @@ export function Navbar() {
           aria-expanded={open}
           className={cn(
             "grid size-10 shrink-0 place-items-center rounded-md border lg:hidden",
-            scrolled ? "border-border text-foreground" : "border-ink-foreground/25 text-ink-foreground",
+            scrolled
+              ? "border-border text-foreground"
+              : "border-ink-foreground/25 text-ink-foreground",
           )}
         >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          {open ? (
+            <X className="size-5" />
+          ) : (
+            <Menu className="size-5" />
+          )}
         </button>
       </nav>
+
+      {/* =========================================================
+          MOBILE NAVIGATION
+      ========================================================= */}
 
       {open ? (
         <div className="glass-panel mt-2 border-x-0 lg:hidden">
@@ -124,8 +213,17 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
-            <Button asChild variant="hero" size="lg" className="mt-4">
-              <a href="#business-enquiry" onClick={() => setOpen(false)}>
+
+            <Button
+              asChild
+              variant="hero"
+              size="lg"
+              className="mt-4"
+            >
+              <a
+                href="#business-enquiry"
+                onClick={() => setOpen(false)}
+              >
                 Enquiry Forms
               </a>
             </Button>
