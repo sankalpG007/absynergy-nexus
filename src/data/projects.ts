@@ -17,6 +17,23 @@ import markiMangliImage from "@/assets/projects/16. Marki Mangli Virgin Green Fi
 import maldiMorparImage from "@/assets/projects/17. Maldi Morpar Block , Chattisgarh,  Bhatapara Block Chattisgarh, Karamdih Block  DRONE SURVEY (2).JPG.jpeg";
 import turbheStoneImage from "@/assets/projects/18. Turbhe Stone Quarry Mining Cluster, Navi Mumbai , M. S.  DRONE SURVEY.JPG.jpeg";
 
+/*
+ * ============================================================
+ * MANDIRAYAN PROJECT IMAGES
+ * ============================================================
+ */
+
+import renukaTempleImage from "@/assets/projects2/1. Geodigital Archival of Shree Renuka Temple, Mahur Gadmandir, Mahur, Nanded using DGPS and DRONE survey.JPG.jpeg";
+import matrutirthaImage from "@/assets/projects2/2. Geodigital Archival of Shree Matrutirtha Heritage tank at Mahur, Nanded using DGPS and DRONE survey.JPG.jpeg";
+import anandeshwarImage from "@/assets/projects2/3. Drone Survey & Videography of Anandeshwar Temple and Surrounding  Integrated approach using DRONE and LiDAR..JPG.jpeg";
+import bhavaniMandirImage from "@/assets/projects2/4. Drone-Based Documentation of Heritage Building of Bhavani Mandir, Bhatala, Warora(M.H).JPG.jpeg";
+import mahadeoMandirImage from "@/assets/projects2/5. Drone-Based Documentation of Heritage Building of Mahadeo Mandir, Bhatala, Warora(M.H).JPG.jpeg";
+import markandeshwarImage from "@/assets/projects2/6. Drone Survey & Videography of Markandeshwar Temple, Chamorshi, Gadchiroli and Surrounding Integrated approach usin..jpeg";
+import ramtekGadMandirImage from "@/assets/projects2/7. Drone Survey & Videography of Ramtek Gad Mandir temple complex Integrated approach using DRONE.JPG.jpeg";
+import kalyaneshwarImage from "@/assets/projects2/8. Drone Survey & Videography of Kalyaneshwar temple complex - Integrated approach using DRONE and LiDAR.JPG.jpeg";
+import murlidharImage from "@/assets/projects2/9. Drone Survey & Videography of Murlidhar Temple Nagpur temple complex Integrated approach using.JPG.jpeg";
+
+
 export type Project = {
   id: string;
   title: string;
@@ -27,12 +44,13 @@ export type Project = {
   description: string;
 };
 
+
 /*
+ * ============================================================
  * PROJECT FILTERS
- *
- * Keep the category text exactly the same as the
- * category values used in the projects below.
+ * ============================================================
  */
+
 export const projectCategories = [
   "All",
   "Vasudhayan",
@@ -41,15 +59,19 @@ export const projectCategories = [
 
 
 /*
+ * ============================================================
  * PROJECTS
- *
- * 18 Vasudhayan projects are currently populated
- * with the images supplied by the client.
- *
- * Mandirayan projects can be added later when the
- * remaining 9 images are received.
+ * ============================================================
  */
+
 export const projects: Project[] = [
+
+  /*
+   * ==========================================================
+   * VASUDHAYAN PROJECTS
+   * ==========================================================
+   */
+
   {
     id: "krishna-ghat",
     title: "Krishna Ghat Restoration and Rejuvenation",
@@ -353,13 +375,161 @@ export const projects: Project[] = [
 
 
   /*
-   * ============================================================
+   * ==========================================================
    * MANDIRAYAN PROJECTS
-   * ============================================================
-   *
-   * The 9 Mandirayan photographs have not been added yet.
-   *
-   * When the client provides them, add the projects below
-   * without changing the Projects.tsx component.
+   * ==========================================================
    */
+
+  {
+    id: "mahur-renuka",
+    title:
+      "Geodigital Archival of Shree Renuka Temple, Mahur Gadmandir, Mahur, Nanded",
+    category: "Mandirayan ™",
+    image: renukaTempleImage,
+    client: "Shree Renuka Mata Temple Trust, Mahur",
+    technologies: [
+      "DGPS",
+      "DRONE",
+      "Geo-digital Archival",
+      "Photogrammetry",
+    ],
+    description:
+      "Geo-digital archival of Shree Renuka Temple, Mahur Gadmandir, Mahur, Nanded using DGPS and drone survey.",
+  },
+
+  {
+    id: "mahur-matrutirtha",
+    title:
+      "Geodigital Archival of Shree Matrutirtha Heritage Tank at Mahur, Nanded",
+    category: "Mandirayan ™",
+    image: matrutirthaImage,
+    client: "Shree Renuka Mata Temple Trust, Mahur",
+    technologies: [
+      "DGPS",
+      "DRONE",
+      "Geo-digital Archival",
+      "Heritage Documentation",
+    ],
+    description:
+      "Geo-digital archival of the Shree Matrutirtha Heritage Tank at Mahur, Nanded using DGPS and drone survey.",
+  },
+
+  {
+    id: "anandeshwar",
+    title:
+      "Drone Survey & Videography of Anandeshwar Temple and Surrounding Area",
+    category: "Mandirayan ™",
+    image: anandeshwarImage,
+    client: "Maharashtra State Road Development Corporation",
+    technologies: [
+      "DRONE",
+      "LiDAR",
+      "Videography",
+      "Heritage Documentation",
+    ],
+    description:
+      "Drone survey and videography of Anandeshwar Temple and its surrounding area using an integrated drone and LiDAR approach.",
+  },
+
+  {
+    id: "bhavani-bhatala",
+    title:
+      "Drone-Based Documentation of Heritage Building of Bhavani Mandir, Bhatala, Warora",
+    category: "Mandirayan ™",
+    image: bhavaniMandirImage,
+    client: "State Archaeology, Maharashtra",
+    technologies: [
+      "DRONE",
+      "LiDAR",
+      "Heritage Documentation",
+      "3D Modelling",
+    ],
+    description:
+      "Drone-based documentation of the heritage building of Bhavani Mandir at Bhatala, Warora, Maharashtra.",
+  },
+
+  {
+    id: "mahadeo-bhatala",
+    title:
+      "Drone-Based Documentation of Heritage Building of Mahadeo Mandir, Bhatala, Warora",
+    category: "Mandirayan ™",
+    image: mahadeoMandirImage,
+    client: "State Archaeology, Maharashtra",
+    technologies: [
+      "DRONE",
+      "LiDAR",
+      "Heritage Documentation",
+      "3D Modelling",
+    ],
+    description:
+      "Drone-based documentation of the heritage building of Mahadeo Mandir at Bhatala, Warora, Maharashtra.",
+  },
+
+  {
+    id: "markandeshwar",
+    title:
+      "Drone Survey & Videography of Markandeshwar Temple, Chamorshi, Gadchiroli",
+    category: "Mandirayan ™",
+    image: markandeshwarImage,
+    client: "Maharashtra State Road Development Corporation",
+    technologies: [
+      "DRONE",
+      "LiDAR",
+      "Videography",
+      "Heritage Documentation",
+    ],
+    description:
+      "Drone survey and videography of Markandeshwar Temple, Chamorshi, Gadchiroli and its surrounding area using an integrated approach.",
+  },
+
+  {
+    id: "ramtek-gad-mandir",
+    title:
+      "Drone Survey & Videography of Ramtek Gad Mandir Temple Complex",
+    category: "Mandirayan ™",
+    image: ramtekGadMandirImage,
+    client: "NHAI",
+    technologies: [
+      "DRONE",
+      "Videography",
+      "Heritage Documentation",
+      "Spatial Analysis",
+    ],
+    description:
+      "Drone survey and videography of the Ramtek Gad Mandir temple complex using an integrated drone-based approach.",
+  },
+
+  {
+    id: "kalyaneshwar",
+    title:
+      "Drone Survey & Videography of Kalyaneshwar Temple Complex",
+    category: "Mandirayan ™",
+    image: kalyaneshwarImage,
+    client: "Shewalkar Builders, Nagpur",
+    technologies: [
+      "DRONE",
+      "LiDAR",
+      "Videography",
+      "Heritage Documentation",
+    ],
+    description:
+      "Drone survey and videography of the Kalyaneshwar temple complex using an integrated drone and LiDAR approach.",
+  },
+
+  {
+    id: "murlidhar",
+    title:
+      "Drone Survey & Videography of Murlidhar Temple Complex, Nagpur",
+    category: "Mandirayan ™",
+    image: murlidharImage,
+    client: "VIPL, Nagpur",
+    technologies: [
+      "DRONE",
+      "Videography",
+      "Heritage Documentation",
+      "Spatial Documentation",
+    ],
+    description:
+      "Drone survey and videography of the Murlidhar Temple complex in Nagpur using an integrated approach.",
+  },
 ];
