@@ -185,12 +185,12 @@ export const company = {
   },
   {
     name: "Dhanashree Naik",
-    role: "Product Associate Development",
+    role: "Associate Product Development",
     image: dhanashreeImage,
   },
   {
     name: "Sankalp Singh",
-    role: "AI/ML Associate Developer ",
+    role: "Associate AI/ML Developer ",
     image: sankalpImage,
   },
 ],
