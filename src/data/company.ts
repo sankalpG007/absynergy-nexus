@@ -190,7 +190,7 @@ export const company = {
   },
   {
     name: "Sankalp Singh",
-    role: "AI/ML Developer",
+    role: "AI/ML Developer Associate",
     image: sankalpImage,
   },
 ],
